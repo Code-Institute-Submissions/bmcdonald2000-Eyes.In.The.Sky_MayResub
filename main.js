@@ -285,27 +285,27 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
    break;
   // when cloudy
       case "Clouds":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Clouds.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clouds.gif')";
    break;
   // when foggy
       case "Fog":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Fog.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Fog.gif')";
    break;
   // when raining
       case "Rain":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Rain.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Rain.gif')";
    break;
   // when clear
       case "Clear":
-   document.getElementById("bg-wrapperg").style.backgroundImage = "url('/Media/Images/Clear.gif')";
+   document.getElementById("bg-wrapperg").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
    break;
   // when Thundery
       case "Thunderstorm":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Thunderstorm.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Thunderstorm.gif')";
    break;
   // the defult background that will be used 
       default:
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Clear.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
    break;
    };
  
