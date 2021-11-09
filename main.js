@@ -150,7 +150,14 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   document.getElementById("hr4icon").src = gethr4Icon;
   document.getElementById("hr5icon").src = gethr5Icon;
  
-  
+  // Tommorow's data
+  let epochTommorrow = Data.daily['1'].dt;
+  let FullDateTommorrow= new Date(epochTommorrow * 1000);
+  let TommorrowNumb = FullDateTommorrow.getDay();
+  let Tommorrow= getDayofWeek(TommorrowNumb);
+  let TempTomo = Math.round(Data.daily['1'].temp.day);
+  let WeatherTomo = Data.daily['1'].weather[0].main
+
 });
 }; 
 };
