@@ -31,4 +31,18 @@ button.onclick = function() {
   // hide instructions display when button is clicked
   document.getElementById("instructions").style.display = "none";
 
-};
+   
+ // gives url for api and allows the result fetched to be specific to the users input.
+ fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputvalue.value+'&units=metric&appid=5701594af7e6297f4750926ed730f1fd')
+ .then(response => response.json())
+ .then(data => {
+
+    let lat = data.coord.lat;
+    let lon = data.coord.lon;
+    getGlobalForecast(lat, lon);
+   
+    let cityValue = data.name;
+    city.innerHTML = cityValue;
+ });
+          };
+   
