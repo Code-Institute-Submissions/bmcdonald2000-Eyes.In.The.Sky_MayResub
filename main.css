@@ -33,7 +33,29 @@ body{
    font-size: 20px;
    font-weight: 300;
   }
-  
+  /* styles the local button*/
+  .btn-local{
+   border: none;
+   outline: none;
+   border-radius: 0px 0px 15px 0px ;
+   border-bottom: 4px solid #ffa641de;
+   width: 50px;
+   height: 47px;
+   color: #ffffff;
+   background-color: #419AFF;
+  }
+  /* styles the global button*/
+  .btn-global{
+   border: none;
+   outline: none;
+   border-radius: 15px 0px 0px  0px ;
+   border-bottom: 4px solid #ffa641de;
+   width: 50px;
+   height: 47px;
+   color: #ffffff;
+   background-color: #419AFF;
+  }
+   
   
   
   
