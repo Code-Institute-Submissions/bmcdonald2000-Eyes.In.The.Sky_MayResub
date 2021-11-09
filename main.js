@@ -359,4 +359,20 @@ btn.onclick = function() {
              let weatherText = await weatherObject.text();
              parseWeather(weatherText);
          };
-}};
+         
+         // parsed weather data
+         let parseWeather = function(weatherText) {
+             let weatherJSON = JSON.parse(weatherText);
+
+             // stores the daily data in a seperate variable
+             let dailyForecast = weatherJSON.daily;
+            
+             // calculation to find today
+              for (let d = 0; d < dailyForecast.length; d ++) {
+                  let today = new Date().getDay() + d;
+              if (today > 6) {
+                  today = today - 7 ;
+          };
+ 
+             
+         }}}};
