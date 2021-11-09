@@ -322,7 +322,7 @@ let getDayofWeek = function(DayNumb) {
  $(".delay").hide(0).delay(700).show(0);
 };
 
-//  Local Button Function,, on click the geolocation API will ask permission to use the users location
+//  Local Button Function,, on click the geolocation API will ask permission to use the users
 btn.onclick = function() {
 
    //  if there is an error with the geolocation, the user will recieve an alert
@@ -340,12 +340,23 @@ btn.onclick = function() {
 
   // hide instructions display when button is clicked
   document.getElementById("instructions").style.display = "none";
-
-    // a different end point is used to return the data based on the users input.
+ 
+ // a different end point is used to return the data based on the users input.
  let getForecast = function(lat, lon) {
  
    // the lat and lon from the previous endpoint are inserted into the URL
          let url = 'https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=minutely&units=metric&appid=5701594af7e6297f4750926ed730f1fd';
          getWeather(url);
  };
-   }}
+   
+   // asynchronous function to ensure the the next line of code is not executed until the function has finished processing
+         async function getWeather(url) {
+            
+            // fetch results asigned to weather object
+             let weatherObject= await fetch(url);
+            
+             // weather object is then converted into text
+             let weatherText = await weatherObject.text();
+             parseWeather(weatherText);
+         };
+}};
