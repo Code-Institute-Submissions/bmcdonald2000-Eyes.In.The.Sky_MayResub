@@ -22,10 +22,19 @@ button.onclick = function() {
 
   //  validates searchbar so white space and numbers will return an error
    var i = inputvalue.value;
-      if (i == "[0-9]") {
-        alert("Location invalid, please try again");
+   const Cityformat = i.toString();
+
+      if (i == /\d/.test(Cityformat)){
+        alert(`"${i}" is an invalid location, please try again. 
+        
+        Hint: Do not include numbers`);
         return false;
-      
+      }
+      else if (i == "") {
+         alert(`"${i}"is an invalid location, please try again. 
+
+         Hint: If you want to use your current location, use the other button`);
+         return false;
    } else {
    $(".loader").show(0).delay(700).hide(0);
  
