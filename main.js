@@ -114,6 +114,34 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   document.getElementById("hour4").innerHTML = hour4 + "°c"; 
   document.getElementById("hour5").innerHTML = hour5 + "°c";   
  
+  //Icon url and format
+  let iconUrl = "http://openweathermap.org/img/wn/";
+  let format = ".png";
+  
+  //Now icons data
+  let NowIcon = Data.hourly['0'].weather[0].icon;
+  let getNowIcon = iconUrl + NowIcon + format;
+ 
+  //hr1 icons data
+  let hr1Icon = Data.hourly['1'].weather[0].icon;
+  let gethr1Icon = iconUrl + hr1Icon + format;
+ 
+  //hr2 icons data
+  let hr2Icon = Data.hourly['2'].weather[0].icon;
+  let gethr2Icon = iconUrl + hr2Icon + format;
+ 
+  //hr3 icons data
+  let hr3Icon = Data.hourly['3'].weather[0].icon;
+  let gethr3Icon = iconUrl + hr3Icon + format;
+ 
+  //hr4 icons data
+  let hr4Icon = Data.hourly['4'].weather[0].icon;
+  let gethr4Icon = iconUrl + hr4Icon + format;
+ 
+  //hr5 icons data
+  let hr5Icon = Data.hourly['5'].weather[0].icon;
+  let gethr5Icon = iconUrl + hr5Icon + format;  
+   
 });
 }; 
 };
