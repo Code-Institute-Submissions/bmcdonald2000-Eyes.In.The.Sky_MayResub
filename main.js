@@ -328,6 +328,11 @@ btn.onclick = function() {
    //  if there is an error with the geolocation, the user will recieve an alert
    if (!navigator.geolocation) {
       alert("Geolocation is not supported by your browser or is not enabled.");
-
+   } else {
+  let userPosition = function(pos){
+          let lat = pos.coords.latitude;
+          let lon = pos.coords.longitude;
+          getForecast(lat, lon);
+  };
  };
     };
