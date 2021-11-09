@@ -16,7 +16,18 @@
             <button class="btn-local" type="button" id="local-search-button"  aria-label="local-search-button"><i class="fas fa-map-pin fa-3x"></i></button>
     </header>
     <main>
+             <div class="instructions" id="instructions">
+                   <h2> How to use:</h2>
+                   <p> • For your local weather click the "<i class="fas fa-map-pin fa-1x"></i>" button.</p>
+                   <p> • For weather in another location, type the location name.</p>
+                   <p> • Then click the "<i class="fas fa-globe fa-1x"></i>" button.</p>
+             </div>
 
+             <div class="loader">
+               <i class="fas fa-spinner fa-4x fa-pulse"></i>
+             </div>
+
+             <div class =delay id="delay">
                <div class= "location-wrap">
                    <div class="city" id="city">
                    </div>
@@ -57,6 +68,7 @@
                        </div>
                  </div> 
                </div>
+             </div>
 
              <div class="hourly-weather" id="hide">
                <div class="now"><p id="timenow"></p>
