@@ -252,6 +252,20 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   let Icon7 = Data.daily['6'].weather[0].icon;
   let getIcon7 = iconUrl + Icon7 + format;
  
+  //Tomorrow's icons
+  document.getElementById("Tomorrows-icon").src = getTomorowsIcon;
+  //DayAfterTommorrow's icon
+  document.getElementById("DayAfterTomorrows-icon").src = getDayAfterTommorrowIcon;
+  //Day 4's icon
+  document.getElementById("icon4").src = getIcon4;
+  //Day 5's icon
+  document.getElementById("icon5").src = getIcon5;
+  //Day 6's icon
+  document.getElementById("icon6").src = getIcon6;
+  //Day 7's icon
+  document.getElementById("icon7").src = getIcon7;
+ 
+
 });
 }; 
 };
