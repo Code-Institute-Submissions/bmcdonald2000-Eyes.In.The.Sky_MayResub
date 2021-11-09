@@ -227,7 +227,31 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   document.getElementById("day7").innerHTML = SeventhDay;
   document.getElementById("day7temp").innerHTML = TempDSeven + "°c";
   document.getElementById("Weatherday7").innerHTML = WeatherDSeven;
-
+ 
+  //Tomorrow's icons data
+  let tomorrowsIcon = Data.daily['1'].weather[0].icon;
+  let getTomorowsIcon = iconUrl + tomorrowsIcon + format;
+ 
+  //DayAfterTommorrow
+  let DayAfterTommorrowIcon = Data.daily['2'].weather[0].icon;
+  let getDayAfterTommorrowIcon = iconUrl + DayAfterTommorrowIcon + format;
+ 
+  //Day 4's icon data
+  let Icon4 = Data.daily['3'].weather[0].icon;
+  let getIcon4 = iconUrl + Icon4 + format;
+ 
+  //Day 5's icon data
+  let Icon5 = Data.daily['4'].weather[0].icon;
+  let getIcon5 = iconUrl + Icon5 + format;
+ 
+  //Day 6's icon data
+  let Icon6 = Data.daily['5'].weather[0].icon;
+  let getIcon6 = iconUrl + Icon6 + format;
+ 
+  //Day 7's icon data
+  let Icon7 = Data.daily['6'].weather[0].icon;
+  let getIcon7 = iconUrl + Icon7 + format;
+ 
 });
 }; 
 };
