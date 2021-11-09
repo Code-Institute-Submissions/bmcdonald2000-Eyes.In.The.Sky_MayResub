@@ -50,6 +50,15 @@ let getGlobalForecast = function(lat, lon) {
     .then(response => response.json())
     .then(Data => {
    
+   //  provides variable names and the current data that should be returned.
+    var temperatureValue = Math.round(Data.current.temp);
+    var weatherValue = Data.current.weather[0].main;
+    var humidityValue = Data.current.humidity;
+    var pressureValue = Data.current.pressure;
+    var windspeedValue = Data.current.wind_speed;
+    var temperaturemaxValue = Math.round(Data.daily['0'].temp.max);
+    var temperatureminValue = Math.round(Data.daily['0'].temp.min);
+    var feelslikeValue = Math.round(Data.current.feels_like);
    })};
        }
    
