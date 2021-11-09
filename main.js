@@ -98,5 +98,22 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   document.getElementById("time4").innerHTML = Time4 + ":00";
   document.getElementById("time5").innerHTML = Time5 + ":00";
  
-  })}; 
+  // Today's hourly data
+  let NOW = Math.round(Data.hourly['0'].temp);
+  let hour1 = Math.round(Data.hourly['1'].temp);
+  let hour2 = Math.round(Data.hourly['2'].temp);
+  let hour3 = Math.round(Data.hourly['3'].temp);
+  let hour4 = Math.round(Data.hourly['4'].temp);
+  let hour5 = Math.round(Data.hourly['5'].temp);
+  
+  // Today's hourly data will be returned in the following elements adding the necessary symbols
+  document.getElementById("now").innerHTML = "Now" + NOW + "°c"; 
+  document.getElementById("hour1").innerHTML = hour1 + "°c";
+  document.getElementById("hour2").innerHTML = hour2 + "°c"; 
+  document.getElementById("hour3").innerHTML = hour3 + "°c"; 
+  document.getElementById("hour4").innerHTML = hour4 + "°c"; 
+  document.getElementById("hour5").innerHTML = hour5 + "°c";   
+ 
+});
+}; 
 };
