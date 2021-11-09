@@ -374,5 +374,27 @@ btn.onclick = function() {
                   today = today - 7 ;
           };
  
-             
-         }}}};
+             //  provides variable names and the data that should be returned.
+             let cityValue = weatherJSON.timezone;
+             let temperatureValue = Math.round(weatherJSON.current.temp);
+             let weatherValue = weatherJSON.current.weather[0].main;
+             let humidityValue = weatherJSON.current.humidity;
+             let pressureValue = weatherJSON.current.pressure;
+             let windspeedValue = weatherJSON.current.wind_speed;
+             let temperaturemaxValue = Math.round(dailyForecast [0].temp.max);
+             let temperatureminValue = Math.round(dailyForecast [0].temp.min);
+             let feelslikeValue = Math.round(weatherJSON.current.feels_like);
+ 
+             // the returned data will then be displayed in the corrisponding html class.
+             city.innerHTML = cityValue;
+             temperature.innerHTML =temperatureValue + "°c";
+             weather.innerHTML =weatherValue;
+             humidty.innerHTML ="Humidity:"+ humidityValue + "°c";
+             pressure.innerHTML ="Pressure:"+ pressureValue + "hPa";
+             windspeed.innerHTML ="Wind sped:" + windspeedValue + "m/s";
+             temperaturemax.innerHTML ="H:" + temperaturemaxValue + "°c";
+             temperaturemin.innerHTML ="L:" +temperatureminValue+ "°c";
+             feelslike.innerHTML ="Feels like:"+ feelslikeValue + "°c";
+        
+
+       }}}};
