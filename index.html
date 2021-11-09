@@ -15,5 +15,50 @@
             <input type="text" autocomplete="off" class="searchbar" id="search-bar" placeholder="Enter a location e.g london,uk">
             <button class="btn-local" type="button" id="local-search-button"  aria-label="local-search-button"><i class="fas fa-map-pin fa-3x"></i></button>
     </header>
+    <main>
+               <div class= "location-wrap">
+                   <div class="city" id="city">
+                   </div>
+                   <div class="celcius"><div class="Temp" id="Temperature">
+                   </div></div>
+                   <div class="weather" id="weather"> 
+                   </div>
+               </div>
+
+               <div class="cw-wrapper" id="current-weather">
+                 <div class="info" id="Current-Weather"> 
+                     <div class="current-info">
+                         <div></div>
+                         <div><span class="Humidity" id="humidity"></span></div>
+                     </div>
+                     <div class="current-info">
+                         <div></div>
+                         <div><span class="pressure" id="pressure"></span></div>
+                     </div>
+                     <div class="current-info">
+                         <div></div>
+                         <div><span class="wind" id="wind"></span></div>
+                     </div>
+                 </div> 
+
+                 <div class="other-info" id="Current-weather">
+                       <div class="current-info">
+                           <div></div>
+                           <div><span class="Feels_like" id="feels_like"></span></div>
+                       </div>
+                       <div class="current-info">
+                         <div></div>
+                         <div><span class="highs" id="highs"></span></div>
+                       </div>
+                       <div class="current-info">
+                           <div></div>
+                           <div><span class="Lows" id="lows"></span></div>
+                       </div>
+                 </div> 
+               </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+   <footer></footer>
 </body>
 </html>
