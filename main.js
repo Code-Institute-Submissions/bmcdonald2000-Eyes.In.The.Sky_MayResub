@@ -44,5 +44,12 @@ button.onclick = function() {
     let cityValue = data.name;
     city.innerHTML = cityValue;
  });
-          };
+// A different endpoint is used to return the data based on the lat and lon of the users input value
+let getGlobalForecast = function(lat, lon) {
+   fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=minutely&units=metric&appid=5701594af7e6297f4750926ed730f1fd')
+    .then(response => response.json())
+    .then(Data => {
+   
+   })};
+       }
    
