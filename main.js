@@ -644,6 +644,8 @@ btn.onclick = function() {
               weekday[6] = 'Saturday';
              return (weekday[DayNumb]);
             };
+ 
+          navigator.geolocation.getCurrentPosition(userPosition); 
        };
          // displays hidden class on button click (delayed so that it shows once infor is loaded)
          $(".hourly-weather").hide(0).delay(4000).show(0);
