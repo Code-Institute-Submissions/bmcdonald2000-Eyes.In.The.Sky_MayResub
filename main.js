@@ -341,5 +341,11 @@ btn.onclick = function() {
   // hide instructions display when button is clicked
   document.getElementById("instructions").style.display = "none";
 
-   
+    // a different end point is used to return the data based on the users input.
+ let getForecast = function(lat, lon) {
+ 
+   // the lat and lon from the previous endpoint are inserted into the URL
+         let url = 'https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=minutely&units=metric&appid=5701594af7e6297f4750926ed730f1fd';
+         getWeather(url);
+ };
    }}
