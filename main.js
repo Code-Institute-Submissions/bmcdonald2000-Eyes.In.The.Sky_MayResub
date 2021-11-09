@@ -25,8 +25,8 @@ button.onclick = function() {
    const Cityformat = i.toString();
 
       if (i == /\d/.test(Cityformat)){
+
         alert(`"${i}" is an invalid location, please try again. 
-        
         Hint: Do not include numbers`);
         return false;
       }
@@ -42,7 +42,7 @@ button.onclick = function() {
   document.getElementById("instructions").style.display = "none";
 
    
- // gives url for api and allows the result fetched to be specific to the users input.
+ // gives url for api and allows the result fetched to be specific to the users input. (free API key, okay to publically expose)
  fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputvalue.value+'&units=metric&appid=5701594af7e6297f4750926ed730f1fd')
  .then(response => response.json())
  .then(data => {
