@@ -525,7 +525,7 @@ btn.onclick = function() {
            let Icon7 = weatherJSON.daily['6'].weather[0].icon;
            let getIcon7 = iconUrl + Icon7 + format;
  
+             displayWeatherDay(NOW,hour1,hour2,hour3,hour4,hour5,Time1,Time2,Time3,Time4,Time5,Tommorrow,DayAfterTommorrow,FourthDay,FifthDay,SixthDay,SeventhDay,TempTomo,WeatherTomo,TempDayAfterTomo,WeatherDayAfterTomo,TempDFour,WeatherDFour,TempDFive,WeatherDFive,TempDSix,WeatherDSix,TempDSeven,WeatherDSeven,getTomorowsIcon,getDayAfterTommorrowIcon,getIcon4,getIcon5,getIcon6,getIcon7,getNowIcon,gethr1Icon,gethr2Icon,gethr3Icon,gethr4Icon,gethr5Icon);
              
-         }}};
-         
+         }}}
        };
