@@ -334,5 +334,12 @@ btn.onclick = function() {
           let lon = pos.coords.longitude;
           getForecast(lat, lon);
   };
- };
-    };
+  
+  //  loader appears until all the data is returned
+  $(".loader").show(0).delay(4000).hide(0);
+
+  // hide instructions display when button is clicked
+  document.getElementById("instructions").style.display = "none";
+
+   
+   }}
