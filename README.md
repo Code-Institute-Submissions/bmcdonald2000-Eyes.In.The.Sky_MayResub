@@ -1,108 +1,119 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Eyes In The Sky 
 
-Welcome USER_NAME,
+<img src=" Assets/Images/logo.png" alt="Logo" width="250px" height ="200px" items-align="centre">
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive-Website-Image]
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+ :globe_with_meridians: Live Website 
 
-## Gitpod Reminders
+![Github Icon](/Assets/Images/github.png) [Github repository](https://github.com/bmcdonald2000/Eyes.In.The.Sky)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## What is Eyes In The Sky ?
 
-Another blue button should appear to click: _Open Browser_.
+Eyes In The Sky is a weather application that provides live and forecast weather data based on the users location or a location of their choice. Eyes In The Sky is useful for individuals who wish to plan their day/week in occordance to the weather. The ability to check both global and local weather is particularly useful to users planning to take a trip abroad.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+<details>
+<summary><strong>Table of contents:</strong></summary>
+<br>
 
-A blue button should appear to click: _Make Public_,
+[User Experience (UX)](##User-Experience-(UX))
 
-Another blue button should appear to click: _Open Browser_.
+[Features](##Features)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Technologies used](##Technologies-used)
 
-To log into the Heroku toolbelt CLI:
+[Testing](##Testings)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Deployment](##Deployment)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+[Known bugs](##Known-bugs)
 
-------
+[Credits](##Credits)
+</details>
 
-## Release History
+## User Experience (UX)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### User Stories
+• As a user, I want to be able to acess weather data on my mobile so I can check the weather whislt on the go.
+• As a user, I want to be able to check the hourly weather for the current days weather.
+• As a user, I want to be able to input my own location into an input field in order to get weather data for any desired location.
+• As a user, I want to be able to successfully submit my input in order to retrieve weather data for my input.
+• As a user, I want some sort of feedback to let me know my search request was processed.
+• As a user, I want to be able to use my device's location in order to get weather data without needing to type in my location.
+• As a user, I want to be able to view the results of my successful search so that I can know the weather.
+• As a user, I want to view the future weather for my searched location so that I know what the weather will be like for the rest of the week.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Design
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The main goal was to make an intuitive UX, so that the user is not confused when visiting the Website. To achieve this, I created a simple, succinct, one-page web application. Once the page has loaded the user sees an searchbar with place holder text, that tells them to enter a location. There is also a set of instructions below the text to insure the user understands the button functions.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The users desired results needed to be obtained with ease. This was achieved by using a 'Current Location' button, so they can get search results within one click, limiting the number of user actions to generate weather data.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The user needs to be able to easiy acess weather data from any device. To ensure this was possible I have enabled a scroll function so overflow is visble and kept the UX design simple so that it can be easily adjusted across all viewport sizes without the user loosing access to any functions or information.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The results of the search also needed to be clear , partciuarly for those using smaller viewports. The REST API that collected Weather Data had lots of data that could be displayed, so I eliminated any unncessary data so that the user only provided with  useful data. To help me determine which information was the most useful, I compared the the kind of data available on popular weather apps. Then tailored this to the needs of my target audience.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+##### • Colour scheme
+   ° I have gone for a complimentary colour palette, which I desgined using [canva](https://www.canva.com/colors/color-wheel/). The overall theme of the site is blue(#419AFF) and orange (#FFA641) as these are colours of the  sky and sun, thus commonly associated with the weather,  tying in with the purpose of the app. To make things easy for the user I used a monchrome design for the text. All hourly and forecasted weather data is displayed in white font (#000000) and a black background (#000000ec), an opaque black was used to create enough contrast between the animated background and the text for it to be visible, but not so much that it distracts the user from the animation or disrupts the fluidity of the design. Where a white font was not suitable I have used black (#ffffff).
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+##### • Typography
+   ° In keeping with the simple style of the website, I have chosen to use a Thai and Latin family font 'Mali' as it has a carefree feel and is easy to read. I want the users to be carefree whislt using the site as the purpose of the site is to alow the users to retrived their desired data in a stress free way. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+##### • Imagery 
+   ° The weather icons seen on the site are from the [Rest API](https://openweathermap.org/api). 
+   ° The icons used for the buttons and the loader are from [font awesome](https://fontawesome.com/v6.0)
+   ° The animated backgrounds used are from [pexels](https://www.pexels.com/).
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##### • Wireframes
+  °  Wireframes were created using [Figma] (https://www.figma.com/). To meet my UX objective of  creating a simple and intuitive User Interface (UI), I initially used a different colour schemes but further into the development I  realised greater contrast was required in order to engage the User. I also decided to include animated background and more craetive button styling, keeping inline with the simplistic theme but improving user engagement.  Here is the link to [my wireframes](https://www.figma.com/file/4BqP3k0Ta5XqvtWtveeFtR/Wire-Frames?node-id=0%3A1) for desktop and mobile. Below are screenshots of the desktop and mobile Wireframes. :point_down:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  **Desktop:** :desktop_computer:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<img src="Assets/Images/Desktop-wireframe.png" height="600px" width=600px alt="Desktop-Mockup">
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  **Mobile:** :iphone:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<img src="Assets/Images/Mobile-wireframe.png" height="600px" width=300px alt="Mobile-Mockup">
 
-------
+## Features
 
-## FAQ about the uptime script
+#### Instructions container
+When the user visits the web application, there are a few simple instructions that allow the user to understand how to use the site.
 
-**Why have you added this script?**
+#### Current Location Weather
+The user can click the location button, the browser will then ask the user permission to access their device's location. Once that is accepted, the weather results shown will be for that location - using latitude and longitude of the User's device. This button uses the Geolocation API.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Global button
+Alternatively, the user can enter a location of their choice into the searchbar. Then click the global button, the weather API will return weather data for that location, provided the input is valid. Otherwise an error message will occur and the user will be prompted to try again.
 
-**How will this affect me?**
+#### Live Weather
+When the user clicks either button, the app will display the current weather, location and any key information about the location. (Temperature, Weather,Humidity, Wind Speed, Pressure, Feels like, Highs and Lows). 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+More information could have been added, but this could have potentially overwhelmed the user so instead I decided that this information was most important to a user seeking live weather information. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+#### Hourly Weather
+To ensure the user recives the most accurate weather information for the day, hourly weather data for that location, is also displayed below the Live weather data.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+#### Forecast Weather
+The user will alos be provide with weather forcast for the next 6 days. Giving them a 7day weather app. To maintain the simplicity of the UX only the day, weather, weather icon and temperature is displayed for forecasted weather.
 
-**So….?**
+#### Footer
+The footer contains buttons with links to Github, LinkedIn and Email where the can contact me. The links also open in a new tab for the users convenience.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+## Technologies used
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+[Tinypng](https://tinypng.com/)
+[Ezgift]https://ezgif.com/video-to-gif
 
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Testings
+## Deployment
+## Known bugs
+## credits
