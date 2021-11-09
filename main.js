@@ -396,5 +396,136 @@ btn.onclick = function() {
              temperaturemin.innerHTML ="L:" +temperatureminValue+ "°c";
              feelslike.innerHTML ="Feels like:"+ feelslikeValue + "°c";
         
-
-       }}}};
+             // Today's hourly data
+             let NOW = Math.round(weatherJSON.hourly['0'].temp);
+             let hour1 = Math.round(weatherJSON.hourly['1'].temp);
+             let hour2 = Math.round(weatherJSON.hourly['2'].temp);
+             let hour3 = Math.round(weatherJSON.hourly['3'].temp);
+             let hour4 = Math.round(weatherJSON.hourly['4'].temp);
+             let hour5 = Math.round(weatherJSON.hourly['5'].temp);
+            
+             // Tommorow's data
+             let epochTommorrow = weatherJSON.daily['1'].dt;
+             let FullDateTommorrow= new Date(epochTommorrow * 1000);
+             let TommorrowNumb = FullDateTommorrow.getDay();
+             let Tommorrow= getDayofWeek(TommorrowNumb);
+             let TempTomo = Math.round(weatherJSON.daily['1'].temp.day);
+             let WeatherTomo = weatherJSON.daily['1'].weather[0].main;
+            
+             // Day After Tommorrow's data
+             let epochDayAfterTommorrow = weatherJSON.daily['2'].dt;
+             let FullDate3 = new Date(epochDayAfterTommorrow * 1000);
+             let DayAfterTommorrowNumb = FullDate3.getDay();
+             let DayAfterTommorrow= getDayofWeek(DayAfterTommorrowNumb);
+             let TempDayAfterTomo = Math.round(weatherJSON.daily['2'].temp.day);
+             let WeatherDayAfterTomo = weatherJSON.daily['2'].weather[0].main;
+            
+             // Fourth Days data
+             let epochFourthDay = weatherJSON.daily['3'].dt;
+             let FullDate4 = new Date(epochFourthDay * 1000);
+             let FourthDayNumb = FullDate4.getDay();
+             let FourthDay= getDayofWeek(FourthDayNumb);
+             let TempDFour = Math.round(weatherJSON.daily['3'].temp.day);
+             let WeatherDFour = weatherJSON.daily['3'].weather[0].main;
+            
+             //Fifth Days data
+             let epochFifthDay = weatherJSON.daily['4'].dt;
+             let FullDate5 = new Date(epochFifthDay * 1000);
+             let FifthDayNumb = FullDate5.getDay();
+             let FifthDay= getDayofWeek(FifthDayNumb);
+             let TempDFive = Math.round(weatherJSON.daily['4'].temp.day);
+             let WeatherDFive = weatherJSON.daily['4'].weather[0].main;
+            
+             //Sixth Days data
+             let epochSixthDay = weatherJSON.daily['5'].dt;
+             let FullDate6 = new Date(epochSixthDay * 1000);
+             let SixthDayNumb = FullDate6.getDay();
+             let SixthDay= getDayofWeek(SixthDayNumb);
+             let TempDSix = Math.round(weatherJSON.daily['5'].temp.day);
+             let WeatherDSix = weatherJSON.daily['5'].weather[0].main;
+            
+             //Seventh Days data
+             let epochSeventhDay = weatherJSON.daily['6'].dt;
+             let FullDate7 = new Date(epochSeventhDay * 1000);
+             let SeventhDayNumb = FullDate7.getDay();
+             let SeventhDay= getDayofWeek(SeventhDayNumb);       
+             let TempDSeven = Math.round(weatherJSON.daily['6'].temp.day);
+             let WeatherDSeven = weatherJSON.daily['6'].weather[0].main;
+ 
+             // Hourly time in epoch time
+             let EpochTime1 = weatherJSON.hourly['1'].dt;
+             let EpochTime2 = weatherJSON.hourly['2'].dt;
+             let EpochTime3 = weatherJSON.hourly['3'].dt;
+             let EpochTime4 = weatherJSON.hourly['4'].dt;
+             let EpochTime5 = weatherJSON.hourly['5'].dt;
+            
+             // hourly time and date
+             let DateTime1 = new Date(EpochTime1 * 1000);
+             let DateTime2 = new Date(EpochTime2 * 1000);
+             let DateTime3 = new Date(EpochTime3 * 1000);
+             let DateTime4 = new Date(EpochTime4 * 1000);
+             let DateTime5 = new Date(EpochTime5 * 1000);
+ 
+             // hourly time
+             let Time1 = DateTime1.getHours();
+             let Time2 = DateTime2.getHours();
+             let Time3 = DateTime3.getHours();
+             let Time4 = DateTime4.getHours();
+             let Time5 = DateTime5.getHours();
+ 
+           //Icon url and format
+              let iconUrl = "http://openweathermap.org/img/wn/";
+              let format = ".png";
+           
+           //Now icons data
+              let NowIcon = weatherJSON.hourly['0'].weather[0].icon;
+              let getNowIcon = iconUrl + NowIcon + format;
+          
+           //hr1 icons data
+              let hr1Icon = weatherJSON.hourly['1'].weather[0].icon;
+              let gethr1Icon = iconUrl + hr1Icon + format;
+          
+           //hr2 icons data
+              let hr2Icon = weatherJSON.hourly['2'].weather[0].icon;
+              let gethr2Icon = iconUrl + hr2Icon + format;
+          
+           //hr3 icons data
+              let hr3Icon = weatherJSON.hourly['3'].weather[0].icon;
+              let gethr3Icon = iconUrl + hr3Icon + format;
+          
+           //hr4 icons data
+              let hr4Icon = weatherJSON.hourly['4'].weather[0].icon;
+              let gethr4Icon = iconUrl + hr4Icon + format;
+          
+           //hr5 icons data
+              let hr5Icon = weatherJSON.hourly['5'].weather[0].icon;
+              let gethr5Icon = iconUrl + hr5Icon + format;
+ 
+           //Tomorrow's icons data
+              let tomorrowsIcon = weatherJSON.daily['1'].weather[0].icon;
+              let getTomorowsIcon = iconUrl + tomorrowsIcon + format;
+          
+           //DayAfterTommorrow
+              let DayAfterTommorrowIcon = weatherJSON.daily['2'].weather[0].icon;
+              let getDayAfterTommorrowIcon = iconUrl + DayAfterTommorrowIcon + format;
+          
+           //Day 4's icon data
+              let Icon4 = weatherJSON.daily['3'].weather[0].icon;
+              let getIcon4 = iconUrl + Icon4 + format;
+          
+           //Day 5's icon data
+              let Icon5 = weatherJSON.daily['4'].weather[0].icon;
+              let getIcon5 = iconUrl + Icon5 + format;
+          
+           //Day 6's icon data
+           let Icon6 = weatherJSON.daily['5'].weather[0].icon;
+           let getIcon6 = iconUrl + Icon6 + format;
+ 
+           //Day 7's icon data
+           let Icon7 = weatherJSON.daily['6'].weather[0].icon;
+           let getIcon7 = iconUrl + Icon7 + format;
+ 
+             
+         }}};
+         
+       };
