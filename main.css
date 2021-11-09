@@ -56,6 +56,80 @@ body{
    background-color: #419AFF;
   }
    
+  /* sets the size of place holder text*/
+  header input::placeholder{
+   font-size: 14px;
+   color: black;
+  }
+  
+  
+  /* styles the info container*/
+  .info-wrap{
+   padding:  20px 70px;
+   padding: 20px 20px 45px;
+   color: #ffffff;
+  }
+  /* styles the city text*/
+  .city{
+   font-size: 40px;
+   font-weight: bolder;
+   text-align: center;
+   color: #ffffff;
+  }
+  /* styles the Temperature text, giving it a 3d effect*/
+  .Temp{
+   font-size: 100px;
+   font-weight: 700;
+   text-align: center;
+   text-shadow: 5px 1px 5px #000000ec;
+   color:#ffffff;
+  }
+  /* styles the celcius so that it is smaller than the temperature text and there is space between the two*/
+  .celcius{
+  font-size:50px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 5px 1px 5px #000000ec;
+  color: #ffffff;
+  }
+  /* styles and positions the weather description*/
+  .weather{
+   font-size: 40px;
+   font-style: italic;
+   font-weight: 700;
+   text-align: center;
+   color: #ffffff;
+  }
+  /* styles and positions the weather informaion on the left */
+  .info{
+   padding:20px 20px 20px 20px;
+   border-radius: 15px 15px 15px 15px;
+   display:flex;
+   flex-direction:column;
+   width: 25%;
+   position: relative;
+   top: -180px;
+   margin-left: 15%;
+  }
+  /*Styles all the information for the current day so that it is uniform*/
+  .current-info{
+   padding-bottom: 10px ;
+   color: #ffffff;
+   font-weight: 200;
+  }
+  
+  /*styles and positions the weather informaion on the right*/
+  .other-info{
+   display: flex;
+   flex-direction: column;
+   margin-left: 71%;
+   position: relative;
+   top: -310px;
+   width: 25%;
+   padding:20px 20px 20px 20px;
+   border-radius: 15px 15px 15px 15px;
+  }
+  
   
   
   
