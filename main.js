@@ -265,7 +265,38 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   //Day 7's icon
   document.getElementById("icon7").src = getIcon7;
  
+  // Background animations
+   switch (weatherValue) {
 
+  // when snowing
+     case "Snow":
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Snowing.gif')";
+   break;
+  // when cloudy
+      case "Clouds":
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clouds.gif')";
+   break;
+  // when foggy
+      case "Fog":
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Fog.gif')";
+   break;
+  // when raining
+      case "Rain":
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Rain.gif')";
+   break;
+  // when clear
+      case "Clear":
+   document.getElementById("bg-wrapperg").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+   break;
+  // when Thundery
+      case "Thunderstorm":
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Thunderstorm.gif')";
+   break;
+  // the defult background that will be used 
+      default:
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+   break;
+   };
 });
 }; 
 };
