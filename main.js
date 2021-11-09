@@ -11,6 +11,7 @@ var temperaturemax = document.querySelector('.highs');
 var temperaturemin = document.querySelector('.Lows');
 var feelslike = document.querySelector ('.Feels_like');
 var btn = document.querySelector('.btn-local');
+
 //  hides the following classes until data is returned
 document.getElementById("hidden").style.display = "none";
 document.getElementById("hide").style.display = "none";
@@ -270,31 +271,31 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
 
   // when snowing
      case "Snow":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Snowing.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Snowing.gif')";
    break;
   // when cloudy
       case "Clouds":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clouds.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Clouds.gif')";
    break;
   // when foggy
       case "Fog":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Fog.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Fog.gif')";
    break;
   // when raining
       case "Rain":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Rain.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Rain.gif')";
    break;
   // when clear
       case "Clear":
-   document.getElementById("bg-wrapperg").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+   document.getElementById("bg-wrapperg").style.backgroundImage = "url('/Media/Images/Clear.gif')";
    break;
   // when Thundery
       case "Thunderstorm":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Thunderstorm.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Thunderstorm.gif')";
    break;
   // the defult background that will be used 
       default:
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Clear.gif')";
    break;
    };
  
@@ -313,9 +314,25 @@ let getDayofWeek = function(DayNumb) {
   weekday[6] = 'Saturday';
  return (weekday[DayNumb]);
 };
+
  // displays hidden class and hides the loader
  $(".loader").hide(0);
  $(".hourly-weather").hide(0).delay(700).show(0);
  $(".weather-display").hide(0).delay(700).show(0);
  $(".delay").hide(0).delay(700).show(0);
 };
+
+//  Local Button Function,, on click the geolocation API will ask permission to use the users location
+btn.onclick = function() {
+
+   //  if there is an error with the geolocation, the user will recieve an alert
+   if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser or is not enabled.");
+   } else {
+  let userPosition = function(pos){
+          let lat = pos.coords.latitude;
+          let lon = pos.coords.longitude;
+          getForecast(lat, lon);
+  };
+ };
+    };
