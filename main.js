@@ -327,7 +327,6 @@ let getDayofWeek = function(DayNumb) {
  $(".hourly-weather").hide(0).delay(700).show(0);
  $(".weather-display").hide(0).delay(700).show(0);
  $(".delay").hide(0).delay(700).show(0);
- $(".footer-icons").hide(0).delay(700).show(0);
 };
 };
 
@@ -660,5 +659,4 @@ btn.onclick = function() {
          $(".hourly-weather").hide(0).delay(4000).show(0);
          $(".weather-display").hide(0).delay(4000).show(0);
          $(".delay").hide(0).delay(4000).show(0);
-         $(".footer-icons").hide(0).delay(4000).show(0);
        };
