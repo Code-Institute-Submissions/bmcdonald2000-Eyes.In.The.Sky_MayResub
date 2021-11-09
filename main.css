@@ -194,12 +194,17 @@ color: #ffffff;
 }
 /* styles footer icons*/
 .footer-icons{
-text-align: center;
 color: #ffa641de;
 }
+/* styles footer*/
 footer{
 padding: 15px;
 background-color: #419AFF;
+display: flex;
+align-items: center;
+position: fixed;
+bottom: 0px;
+width: 100vw;
 }
 
 
