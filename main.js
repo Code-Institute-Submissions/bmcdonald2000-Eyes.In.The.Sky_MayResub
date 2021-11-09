@@ -16,7 +16,6 @@ var btn = document.querySelector('.btn-local');
 document.getElementById("hidden").style.display = "none";
 document.getElementById("hide").style.display = "none";
 document.getElementById("delay").style.display = "none";
-document.getElementById("footer-icons").style.display = "none";
  
 //  if the global button is clicked the API will fetch the data
 button.onclick = function() {
