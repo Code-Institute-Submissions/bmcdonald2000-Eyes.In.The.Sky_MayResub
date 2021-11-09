@@ -560,5 +560,78 @@ btn.onclick = function() {
         };
           };
           };
-   } 
+ 
+          let displayWeatherDay = function (NOW,hour1,hour2,hour3,hour4,hour5,Time1,Time2,Time3,Time4,Time5,Tommorrow,DayAfterTommorrow,FourthDay,FifthDay,SixthDay,SeventhDay,TempTomo,WeatherTomo,TempDayAfterTomo,WeatherDayAfterTomo,TempDFour,WeatherDFour,TempDFive,WeatherDFive,TempDSix,WeatherDSix,TempDSeven,WeatherDSeven,getTodaysIcon,getTomorowsIcon,getDayAfterTommorrowIcon,getIcon4,getIcon5,getIcon6,getIcon7,getNowIcon,gethr1Icon,gethr2Icon,gethr3Icon,gethr4Icon,gethr5Icon) {
+           
+            // Today's hourly data will be returned in the following elements adding the necessary symbols
+              document.getElementById("now").innerHTML = NOW + "°c"; 
+              document.getElementById("hour1").innerHTML = hour1 + "°c";
+              document.getElementById("hour2").innerHTML = hour2 + "°c"; 
+              document.getElementById("hour3").innerHTML = hour3 + "°c"; 
+              document.getElementById("hour4").innerHTML = hour4 + "°c"; 
+              document.getElementById("hour5").innerHTML = hour5 + "°c";         
+ 
+           // Today's times data will be returned in the following elements
+              document.getElementById("timenow").innerHTML = "Now";
+              document.getElementById("time1").innerHTML = Time1 + ":00";
+              document.getElementById("time2").innerHTML = Time2 + ":00";
+              document.getElementById("time3").innerHTML = Time3 + ":00";
+              document.getElementById("time4").innerHTML = Time4 + ":00";
+              document.getElementById("time5").innerHTML = Time5 + ":00";
+ 
+           // Tomorrows data will be returned in the following elements
+              document.getElementById("tomorrows").innerHTML = Tommorrow;
+              document.getElementById("temptomo").innerHTML = TempTomo + "°c";
+              document.getElementById("Weathertomo").innerHTML = WeatherTomo;
+          
+           // DayAfterTommorrows data will be returned in the following elements
+              document.getElementById("DayAfterTommorrow").innerHTML = DayAfterTommorrow;
+              document.getElementById("DayAfterTommorrowtemp").innerHTML = TempDayAfterTomo + "°c";
+              document.getElementById("WeatherDayAfterTomo").innerHTML = WeatherDayAfterTomo;
+          
+           // Day 4's data will be returned in the following elements
+              document.getElementById("day4").innerHTML = FourthDay;
+              document.getElementById("day4temp").innerHTML = TempDFour + "°c";
+              document.getElementById("Weatherday4").innerHTML = WeatherDFour;
+ 
+           // Day 5's data will be returned in the following elements
+              document.getElementById("day5").innerHTML = FifthDay;
+              document.getElementById("day5temp").innerHTML = TempDFive + "°c";
+              document.getElementById("Weatherday5").innerHTML = WeatherDFive;
+          
+           // Day 6's data will be returned in the following elements
+              document.getElementById("day6").innerHTML = SixthDay;
+              document.getElementById("day6temp").innerHTML = TempDSix + "°c";
+              document.getElementById("Weatherday6").innerHTML = WeatherDSix;
+          
+           // Day 7's data will be returned in the following elements
+              document.getElementById("day7").innerHTML = SeventhDay;
+              document.getElementById("day7temp").innerHTML = TempDSeven + "°c";
+              document.getElementById("Weatherday7").innerHTML = WeatherDSeven;
+          
+       // The icon data for each day will be returned in the following elements
+          
+           //Today's hourly icons
+           document.getElementById("Nowicon").src = getNowIcon;
+           document.getElementById("hr1icon").src = gethr1Icon;
+           document.getElementById("hr2icon").src = gethr2Icon;
+           document.getElementById("hr3icon").src = gethr3Icon;
+           document.getElementById("hr4icon").src = gethr4Icon;
+           document.getElementById("hr5icon").src = gethr5Icon;
+ 
+           //Tomorrow's icons
+           document.getElementById("Tomorrows-icon").src = getTomorowsIcon;
+           //DayAfterTommorrow's icon
+           document.getElementById("DayAfterTomorrows-icon").src = getDayAfterTommorrowIcon;
+           //Day 4's icon
+           document.getElementById("icon4").src = getIcon4;
+           //Day 5's icon
+           document.getElementById("icon5").src = getIcon5;
+           //Day 6's icon
+           document.getElementById("icon6").src = getIcon6;
+           //Day 7's icon
+           document.getElementById("icon7").src = getIcon7;
+        };
+      }
+
        };
