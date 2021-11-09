@@ -1,4 +1,4 @@
-// selects the html elements for each variable
+// selects the HTML elements for each variable
 var button = document.querySelector('.btn-global');
 var inputvalue = document.querySelector('.searchbar');
 var city = document.querySelector('.city');
@@ -11,4 +11,9 @@ var temperaturemax = document.querySelector('.highs');
 var temperaturemin = document.querySelector('.Lows');
 var feelslike = document.querySelector ('.Feels_like');
 var btn = document.querySelector('.btn-local');
+//  hides the following classes until data is returned
+document.getElementById("hidden").style.display = "none";
+document.getElementById("hide").style.display = "none";
+document.getElementById("delay").style.display = "none";
+ 
 
