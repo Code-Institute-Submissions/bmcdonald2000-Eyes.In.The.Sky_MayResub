@@ -26,15 +26,11 @@ button.onclick = function() {
 
       if (i == /\d/.test(Cityformat)){
 
-        alert(`"${i}" is an invalid location, please try again. 
-        Hint: Do not include numbers`);
+        alert(`"${i}" is an invalid location, please try again.
+        Hint: To use your current location, use the other button. 
+        Dont include blank spaces or number.`);
         return false;
-      }
-      else if (i == "") {
-         alert(`"${i}"is an invalid location, please try again. 
-
-         Hint: If you want to use your current location, use the other button`);
-         return false;
+      
    } else {
    $(".loader").show(0).delay(700).hide(0);
  
