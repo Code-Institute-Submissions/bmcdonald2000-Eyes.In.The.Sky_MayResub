@@ -129,7 +129,20 @@ body{
    padding:20px 20px 20px 20px;
    border-radius: 15px 15px 15px 15px;
   }
+  /* styles the day and temp*/
+  .day , .temp{
+   padding-right: 15px;
+   padding-bottom: 10px;
+  }
   
+  /* styles current weather */
+  .weather{
+   padding-bottom: 20px;
+  }
+  /* styles current highs and lows*/
+  .highs , .lows{
+   padding-right: 15px;
+  }
   
   
   
