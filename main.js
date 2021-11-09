@@ -22,10 +22,11 @@ button.onclick = function() {
 
   //  validates searchbar so white space and numbers will return an error
    var i = inputvalue.value;
-      if (i == "", "[0-9]") {
+      if (i == "[0-9]") {
         alert("Location invalid, please try again");
         return false;
-      } 
+      
+   } else {
    $(".loader").show(0).delay(700).hide(0);
  
   // hide instructions display when button is clicked
@@ -320,6 +321,7 @@ let getDayofWeek = function(DayNumb) {
  $(".hourly-weather").hide(0).delay(700).show(0);
  $(".weather-display").hide(0).delay(700).show(0);
  $(".delay").hide(0).delay(700).show(0);
+};
 };
 
 //  Local Button Function,, on click the geolocation API will ask permission to use the users
