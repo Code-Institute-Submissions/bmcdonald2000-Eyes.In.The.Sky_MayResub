@@ -16,6 +16,7 @@ var btn = document.querySelector('.btn-local');
 document.getElementById("hidden").style.display = "none";
 document.getElementById("hide").style.display = "none";
 document.getElementById("delay").style.display = "none";
+document.getElementById("footer-icons").style.display = "none";
  
 //  if the global button is clicked the API will fetch the data
 button.onclick = function() {
@@ -321,11 +322,12 @@ let getDayofWeek = function(DayNumb) {
  return (weekday[DayNumb]);
 };
 
- // displays hidden class and hides the loader
+ // displays hidden classes and hides the loader
  $(".loader").hide(0);
  $(".hourly-weather").hide(0).delay(700).show(0);
  $(".weather-display").hide(0).delay(700).show(0);
  $(".delay").hide(0).delay(700).show(0);
+ $(".footer-icons").hide(0).delay(700).show(0);
 };
 };
 
@@ -654,8 +656,9 @@ btn.onclick = function() {
  
           navigator.geolocation.getCurrentPosition(userPosition); 
        };
-         // displays hidden class on button click (delayed so that it shows once infor is loaded)
+         // displays hidden class on button click (delayed so that it shows once information is loaded)
          $(".hourly-weather").hide(0).delay(4000).show(0);
          $(".weather-display").hide(0).delay(4000).show(0);
          $(".delay").hide(0).delay(4000).show(0);
+         $(".footer-icons").hide(0).delay(4000).show(0);
        };
