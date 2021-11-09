@@ -157,7 +157,77 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   let Tommorrow= getDayofWeek(TommorrowNumb);
   let TempTomo = Math.round(Data.daily['1'].temp.day);
   let WeatherTomo = Data.daily['1'].weather[0].main
-  
+ 
+  // Day After Tommorrow's data
+  let epochDayAfterTommorrow = Data.daily['2'].dt;
+  let FullDate3 = new Date(epochDayAfterTommorrow * 1000);
+  let DayAfterTommorrowNumb = FullDate3.getDay();
+  let DayAfterTommorrow= getDayofWeek(DayAfterTommorrowNumb);
+  let TempDayAfterTomo = Math.round(Data.daily['2'].temp.day);
+  let WeatherDayAfterTomo = Data.daily['2'].weather[0].main;
+ 
+  // Fourth Days data
+  let epochFourthDay = Data.daily['3'].dt;
+  let FullDate4 = new Date(epochFourthDay * 1000);
+  let FourthDayNumb = FullDate4.getDay();
+  let FourthDay= getDayofWeek(FourthDayNumb);
+  let TempDFour = Math.round(Data.daily['3'].temp.day);
+  let WeatherDFour = Data.daily['3'].weather[0].main;
+ 
+  //Fifth Days data
+  let epochFifthDay = Data.daily['4'].dt;
+  let FullDate5 = new Date(epochFifthDay * 1000);
+  let FifthDayNumb = FullDate5.getDay();
+  let FifthDay= getDayofWeek(FifthDayNumb);
+  let TempDFive = Math.round(Data.daily['4'].temp.day);
+  let WeatherDFive = Data.daily['4'].weather[0].main;
+ 
+  //Sixth Days data
+  let epochSixthDay = Data.daily['5'].dt;
+  let FullDate6 = new Date(epochSixthDay * 1000);
+  let SixthDayNumb = FullDate6.getDay();
+  let SixthDay= getDayofWeek(SixthDayNumb);
+  let TempDSix = Math.round(Data.daily['5'].temp.day);
+  let WeatherDSix = Data.daily['5'].weather[0].main;
+ 
+  //Seventh Days data
+  let epochSeventhDay = Data.daily['6'].dt;
+  let FullDate7 = new Date(epochSeventhDay * 1000);
+  let SeventhDayNumb = FullDate7.getDay();
+  let SeventhDay= getDayofWeek(SeventhDayNumb);       
+  let TempDSeven = Math.round(Data.daily['6'].temp.day);
+  let WeatherDSeven = Data.daily['6'].weather[0].main;
+ 
+  // Tomorrows data will be returned in the following elements
+  document.getElementById("tomorrows").innerHTML = Tommorrow;
+  document.getElementById("temptomo").innerHTML = TempTomo + "°c";
+  document.getElementById("Weathertomo").innerHTML = WeatherTomo;
+ 
+  // DayAfterTommorrows data will be returned in the following elements
+  document.getElementById("DayAfterTommorrow").innerHTML = DayAfterTommorrow;
+  document.getElementById("DayAfterTommorrowtemp").innerHTML = TempDayAfterTomo + "°c";
+  document.getElementById("WeatherDayAfterTomo").innerHTML = WeatherDayAfterTomo;
+ 
+  // Day 4's data will be returned in the following elements
+  document.getElementById("day4").innerHTML = FourthDay;
+  document.getElementById("day4temp").innerHTML = TempDFour + "°c";
+  document.getElementById("Weatherday4").innerHTML = WeatherDFour;
+ 
+  // Day 5's data will be returned in the following elements
+  document.getElementById("day5").innerHTML = FifthDay;
+  document.getElementById("day5temp").innerHTML = TempDFive + "°c";
+  document.getElementById("Weatherday5").innerHTML = WeatherDFive;
+ 
+  // Day 6's data will be returned in the following elements
+  document.getElementById("day6").innerHTML = SixthDay;
+  document.getElementById("day6temp").innerHTML = TempDSix + "°c";
+  document.getElementById("Weatherday6").innerHTML = WeatherDSix;
+ 
+  // Day 7's data will be returned in the following elements
+  document.getElementById("day7").innerHTML = SeventhDay;
+  document.getElementById("day7temp").innerHTML = TempDSeven + "°c";
+  document.getElementById("Weatherday7").innerHTML = WeatherDSeven;
+
 });
 }; 
 };
