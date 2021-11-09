@@ -297,6 +297,21 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
    document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
    break;
    };
+ 
 });
 }; 
+
+// converts the day of the week from a number to a day
+let getDayofWeek = function(DayNumb) {
+  var weekday = new Array(7);
+  weekday[0] = 'Sunday';
+  weekday[1] = 'Monday';
+  weekday[2] = 'Tuesday';
+  weekday[3] = 'Wednesday';
+  weekday[4] = 'Thursday';
+  weekday[5] = 'Friday';
+  weekday[6] = 'Saturday';
+ return (weekday[DayNumb]);
+};
+
 };
