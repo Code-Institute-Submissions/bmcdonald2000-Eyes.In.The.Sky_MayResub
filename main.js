@@ -157,7 +157,7 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   let Tommorrow= getDayofWeek(TommorrowNumb);
   let TempTomo = Math.round(Data.daily['1'].temp.day);
   let WeatherTomo = Data.daily['1'].weather[0].main
-
+  
 });
 }; 
 };
