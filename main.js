@@ -141,7 +141,16 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   //hr5 icons data
   let hr5Icon = Data.hourly['5'].weather[0].icon;
   let gethr5Icon = iconUrl + hr5Icon + format;  
-   
+ 
+  //Today's hourly icons
+  document.getElementById("Nowicon").src = getNowIcon;
+  document.getElementById("hr1icon").src = gethr1Icon;
+  document.getElementById("hr2icon").src = gethr2Icon;
+  document.getElementById("hr3icon").src = gethr3Icon;
+  document.getElementById("hr4icon").src = gethr4Icon;
+  document.getElementById("hr5icon").src = gethr5Icon;
+ 
+  
 });
 }; 
 };
