@@ -59,6 +59,16 @@ let getGlobalForecast = function(lat, lon) {
     var temperaturemaxValue = Math.round(Data.daily['0'].temp.max);
     var temperatureminValue = Math.round(Data.daily['0'].temp.min);
     var feelslikeValue = Math.round(Data.current.feels_like);
-   })};
-       }
-   
+    
+    // the returned data will then be displayed in the corrisponding html class.
+    temperature.innerHTML =temperatureValue + "°c";
+    weather.innerHTML =weatherValue;
+    humidty.innerHTML ="Humidity:"+ humidityValue + "°c";
+    pressure.innerHTML ="Pressure:"+ pressureValue + "hPa";
+    windspeed.innerHTML ="Wind sped:" + windspeedValue + "m/s";
+    temperaturemax.innerHTML ="H:" + temperaturemaxValue + "°c";
+    temperaturemin.innerHTML ="L:" +temperatureminValue+ "°c";
+    feelslike.innerHTML ="Feels like:"+ feelslikeValue + "°c";
+                 
+})};
+};
