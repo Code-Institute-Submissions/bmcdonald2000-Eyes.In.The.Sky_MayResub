@@ -1,10 +1,20 @@
 /* imports the google font 'mali'*/
 @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
+/* Width and height of elements does not include padding or margins*/
 * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
 }
-
+/* styles the body text and background*/
+body{
+   font-family: 'Mali', cursive;
+   background-image: url('/Assets/Images/Clear.gif');
+   background-size: cover;
+   background-repeat: no-repeat;
+  }
+  
+  
+  
 
 
