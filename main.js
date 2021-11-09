@@ -90,5 +90,13 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   let Time3 = DateTime3.getHours();
   let Time4 = DateTime4.getHours();
   let Time5 = DateTime5.getHours();
-  })};
+ 
+ // Today's times data will be returned in the following elements
+  document.getElementById("time1").innerHTML = Time1 + ":00";
+  document.getElementById("time2").innerHTML = Time2 + ":00";
+  document.getElementById("time3").innerHTML = Time3 + ":00";
+  document.getElementById("time4").innerHTML = Time4 + ":00";
+  document.getElementById("time5").innerHTML = Time5 + ":00";
+ 
+  })}; 
 };
