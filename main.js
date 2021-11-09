@@ -26,5 +26,9 @@ button.onclick = function() {
         alert("Location invalid, please try again");
         return false;
       } 
+   $(".loader").show(0).delay(700).hide(0);
+ 
+  // hide instructions display when button is clicked
+  document.getElementById("instructions").style.display = "none";
 
 };
