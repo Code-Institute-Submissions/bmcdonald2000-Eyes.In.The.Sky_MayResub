@@ -526,6 +526,39 @@ btn.onclick = function() {
            let getIcon7 = iconUrl + Icon7 + format;
  
              displayWeatherDay(NOW,hour1,hour2,hour3,hour4,hour5,Time1,Time2,Time3,Time4,Time5,Tommorrow,DayAfterTommorrow,FourthDay,FifthDay,SixthDay,SeventhDay,TempTomo,WeatherTomo,TempDayAfterTomo,WeatherDayAfterTomo,TempDFour,WeatherDFour,TempDFive,WeatherDFive,TempDSix,WeatherDSix,TempDSeven,WeatherDSeven,getTomorowsIcon,getDayAfterTommorrowIcon,getIcon4,getIcon5,getIcon6,getIcon7,getNowIcon,gethr1Icon,gethr2Icon,gethr3Icon,gethr4Icon,gethr5Icon);
-             
-         }}}
+ 
+         // Background animations change based on the weather
+         switch (weatherValue) {
+         // when snowing
+         case "Snow":
+         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Snowing.gif')";
+         break;
+         // when cloudy
+         case "Clouds":
+         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clouds.gif')";
+         break;
+         // when foggy
+         case "Fog":
+         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Fog.gif')";
+         break;
+         // when raining
+         case "Rain":
+         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Rain.gif')";
+         break;
+         // when clear
+         case "Clear":
+         document.getElementById("bg-wrapperg").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+         break;
+         // when Thundery
+         case "Thunderstorm":
+         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Thunderstorm.gif')";
+         break;
+         // the defult background that will be used 
+         default:
+         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+         break;
+        };
+          };
+          };
+   } 
        };
