@@ -313,5 +313,9 @@ let getDayofWeek = function(DayNumb) {
   weekday[6] = 'Saturday';
  return (weekday[DayNumb]);
 };
-
+ // displays hidden class and hides the loader
+ $(".loader").hide(0);
+ $(".hourly-weather").hide(0).delay(700).show(0);
+ $(".weather-display").hide(0).delay(700).show(0);
+ $(".delay").hide(0).delay(700).show(0);
 };
