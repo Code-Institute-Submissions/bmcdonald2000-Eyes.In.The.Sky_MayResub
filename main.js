@@ -632,6 +632,21 @@ btn.onclick = function() {
            //Day 7's icon
            document.getElementById("icon7").src = getIcon7;
         };
-      }
-
+           // converts the day of the week from a number to a day
+           let getDayofWeek = function(DayNumb) {
+              var weekday = new Array(7);
+              weekday[0] = 'Sunday';
+              weekday[1] = 'Monday';
+              weekday[2] = 'Tuesday';
+              weekday[3] = 'Wednesday';
+              weekday[4] = 'Thursday';
+              weekday[5] = 'Friday';
+              weekday[6] = 'Saturday';
+             return (weekday[DayNumb]);
+            };
+       };
+         // displays hidden class on button click (delayed so that it shows once infor is loaded)
+         $(".hourly-weather").hide(0).delay(4000).show(0);
+         $(".weather-display").hide(0).delay(4000).show(0);
+         $(".delay").hide(0).delay(4000).show(0);
        };
