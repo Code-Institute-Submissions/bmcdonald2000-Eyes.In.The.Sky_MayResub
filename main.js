@@ -570,8 +570,8 @@ btn.onclick = function() {
              document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
              break;
              };
-          };
-          };
+          }
+         };
  
           let displayWeatherDay = function (NOW,hour1,hour2,hour3,hour4,hour5,Time1,Time2,Time3,Time4,Time5,Tommorrow,DayAfterTommorrow,FourthDay,FifthDay,SixthDay,SeventhDay,TempTomo,WeatherTomo,TempDayAfterTomo,WeatherDayAfterTomo,TempDFour,WeatherDFour,TempDFive,WeatherDFive,TempDSix,WeatherDSix,TempDSeven,WeatherDSeven,getTomorowsIcon,getDayAfterTommorrowIcon,getIcon4,getIcon5,getIcon6,getIcon7,getNowIcon,gethr1Icon,gethr2Icon,gethr3Icon,gethr4Icon,gethr5Icon) {
            

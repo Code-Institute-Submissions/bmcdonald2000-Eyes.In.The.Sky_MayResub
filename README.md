@@ -3,7 +3,7 @@
 
 ![Responsive-Website-Image](/Assets/Images/Responsive.png)
 
-:globe_with_meridians: Live Website 
+:globe_with_meridians: [Live Website])(https://bmcdonald2000.github.io/Eyes.In.The.Sky/)
 
 ![Github Icon](/Assets/Images/github.png) [Github repository](https://github.com/bmcdonald2000/Eyes.In.The.Sky)
 
@@ -47,11 +47,11 @@ Eyes In The Sky is a weather application that provides live and forecast weather
 
 ### Design :art:
 
-The main goal was to make an intuitive UX, so that the user is not confused when visiting the Website. To achieve this, I created a simple, succinct, one-page web application. Once the page has loaded the user sees an searchbar with place holder text, that tells them to enter a location. There is also a set of instructions below the text to insure the user understands the button functions.
+The main goal was to make an intuitive UX, so that the user is not confused when visiting the Website. To achieve this, I created a simple, succinct, one-page web application. Once the page has loaded the user sees a searchbar with place holder text, that tells them to enter a location. There is also a set of instructions below the text to insure the user understands the button functions.
 
 The users desired results needed to be obtained with ease. This was achieved by using a 'Current Location' button, so they can get search results within one click, limiting the number of user actions to generate weather data.
 
-The user needs to be able to easiy acess weather data from any device. To ensure this was possible I have enabled a scroll function so overflow is visble and kept the UX design simple so that it can be easily adjusted across all viewport sizes without the user loosing access to any functions or information.
+The user needs to be able to easily access weather data from any device. To ensure this was possible I have enabled a scroll function so overflow is visble and kept the UX design simple so that it can be easily adjusted across all viewport sizes without the user loosing access to any functions or information.
 
 The results of the search also needed to be clear , partciuarly for those using smaller viewports. The REST API that collected Weather Data had lots of data that could be displayed, so I eliminated any unncessary data so that the user only provided with  useful data. To help me determine which information was the most useful, I compared the the kind of data available on popular weather apps. Then tailored this to the needs of my target audience.
 
