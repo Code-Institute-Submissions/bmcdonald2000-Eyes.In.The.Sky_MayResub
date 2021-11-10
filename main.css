@@ -8,7 +8,7 @@
 /* stylesthe body text and background*/
 body{
  font-family: 'Mali', cursive;
- background-image: url('/Assets/Images/Clear.gif');
+ background-image: url("/Assets/Images/Clear.gif");
  background-size: cover;
  background-repeat: no-repeat;
  height: 100vh;
