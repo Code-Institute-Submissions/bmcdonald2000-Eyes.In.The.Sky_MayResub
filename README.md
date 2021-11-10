@@ -143,7 +143,7 @@ The data for each location is returned in a seperate card allowing the user to c
 
 [Git](https://git-scm.com/) - I used Git to track the changes to my code. Git was also used for version control.
 
-[Github])(https://github.com/) - Github was used to host my project files. I then used Gitpages to deploy the website.
+[Github](https://github.com/) - Github was used to host my project files. I then used Gitpages to deploy the website.
 
 [Vs Code](https://code.visualstudio.com/)- VS Code powers gitpod and was used to build the website.
 
