@@ -278,7 +278,7 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
 
   // when snowing
      case "Snow":
-   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Media/Images/Snowing.gif')";
+   document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Snowing.gif')";
    break;
   // when cloudy
       case "Clouds":
@@ -566,7 +566,7 @@ btn.onclick = function() {
          break;
          // the defult background that will be used 
          default:
-         document.getElementById("bg-wrapper").style.backgroundImage = "url(/Assets/Images/Clear.gif)";
+         document.getElementById("bg-wrapper").style.backgroundImage = "/Assets/Images/Clear.gif";
          break;
         };
           };
