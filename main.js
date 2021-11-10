@@ -566,7 +566,7 @@ btn.onclick = function() {
          break;
          // the defult background that will be used 
          default:
-         document.getElementById("bg-wrapper").style.backgroundImage = "url('/Assets/Images/Clear.gif')";
+         document.getElementById("bg-wrapper").style.backgroundImage = "url(/Assets/Images/Clear.gif)";
          break;
         };
           };
