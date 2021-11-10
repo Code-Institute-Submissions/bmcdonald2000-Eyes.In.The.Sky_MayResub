@@ -127,9 +127,7 @@ The data for each location is returned in a seperate card allowing the user to c
 
 #### Programs used
 
-![Figma]() - I used figma to design my mockups.
-
-![Canva]() - I used canva to create my colour palette. I also used Canva to remove the background colour of my logo and the Spiral image on the about us page.
+![Canva](https://www.canva.com/) - I used canva to create my colour palette. I also used Canva to remove the background colour of my logo and the Spiral image on the about us page.
 
 [Tinypng](https://tinypng.com/) - I used Tinypng to compress my images
 
