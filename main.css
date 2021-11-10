@@ -59,16 +59,17 @@ header input{
  
 /* sets the size of place holder text*/
 header input::placeholder{
- font-size: 14px;
- color: black;
+   font-size: 14px;
+   color: black;
 }
 /* styles the user instructions*/
 .instructions{
- margin-left: 40%;
+ margin-left: 22%;
  color: #000000;
- position: fixed;
+ position: absolute;
  top: 200px;
  font-size: x-large;
+ text-align: center;
 }
 /* styles the page loader*/
 .loader{
@@ -210,5 +211,82 @@ width: 100vw;
 }
 
 /*Media Queries*/
+@media only screen and (max-width: 1000px) {
 
+   /* styles the user instructions on screen 1000px and smaller*/
+   .instructions{
+      margin-left: 15%;
+   }
+}
+@media only screen and (max-width: 900px) {
+      /* styles the user instructions on screen 900px and smaller*/
+      .instructions{
+         margin-left: 10%;
+      }
+}
+@media only screen and (max-width: 780px) {
+   /* styles screens 780px and smaller*/
+   .instructions{
+      margin-left: 20px;
+   }
+   .Temp{
+      margin-left: 70px;
+   }
+   
+}
+@media only screen and (max-width: 620px) {
+   /* styles  screens 620px and smaller*/
+   .Temp{
+      margin-left: 80px;
+   }
+   .cw-wrapper{
+      position: fixed;
+      top: 300px;
+      font-size: small;
+   }
+   .other-info {
+       margin-left: 450px;
+   }
+   .info{
+      margin-right: 600px;
+   }
+   .Temp{
+      font-size: larger;
+   }
+   .city .weather{
+      font-size: large;
+   }
+   .location-wrap{
+      position: relative;
+      top: -40px;
+   }
 
+}
+@media only screen and (max-width: 570px) {
+   /* styles the user instructions on screen 570px and smaller*/
+   .instructions{
+      margin-left: 10px;
+      font-size: larger;
+   }
+   /* Removed additional weather data as the UI becomes overcrowed on smaller screens, data displaid in coloums is overwelming */
+   .other-info{
+      font-size: 0%;
+   }
+   .info{
+      font-size: 0%;
+   }
+   .location-wrap{
+      position: relative;
+      top: -90px;
+   }
+}
+@media only screen and (max-width: 350px) {
+   /* styles the user instructions on screen 350px and smaller*/
+   .instructions{
+      margin-left: 20px;
+   }
+   header input::placeholder{
+      max-width: 200px;
+      font-size: 12px ;
+     }
+}
