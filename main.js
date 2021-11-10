@@ -99,6 +99,7 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   let Time5 = DateTime5.getHours();
  
  // Today's times data will be returned in the following elements
+  document.getElementById("timenow").innerHTML = "Now:";
   document.getElementById("time1").innerHTML = Time1 + ":00";
   document.getElementById("time2").innerHTML = Time2 + ":00";
   document.getElementById("time3").innerHTML = Time3 + ":00";
@@ -114,7 +115,7 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&e
   let hour5 = Math.round(Data.hourly['5'].temp);
   
   // Today's hourly data will be returned in the following elements adding the necessary symbols
-  document.getElementById("now").innerHTML = "Now" + NOW + "°c"; 
+  document.getElementById("now").innerHTML = NOW + "°c"; 
   document.getElementById("hour1").innerHTML = hour1 + "°c";
   document.getElementById("hour2").innerHTML = hour2 + "°c"; 
   document.getElementById("hour3").innerHTML = hour3 + "°c"; 
@@ -398,7 +399,7 @@ btn.onclick = function() {
              weather.innerHTML =weatherValue;
              humidty.innerHTML ="Humidity:"+ humidityValue + "°c";
              pressure.innerHTML ="Pressure:"+ pressureValue + "hPa";
-             windspeed.innerHTML ="Wind sped:" + windspeedValue + "m/s";
+             windspeed.innerHTML ="Wind speed:" + windspeedValue + "m/s";
              temperaturemax.innerHTML ="H:" + temperaturemaxValue + "°c";
              temperaturemin.innerHTML ="L:" +temperatureminValue+ "°c";
              feelslike.innerHTML ="Feels like:"+ feelslikeValue + "°c";
