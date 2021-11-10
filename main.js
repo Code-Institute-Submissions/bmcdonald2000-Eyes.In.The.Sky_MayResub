@@ -333,6 +333,9 @@ let getDayofWeek = function(DayNumb) {
 //  Local Button Function,, on click the geolocation API will ask permission to use the users
 btn.onclick = function() {
 
+   //  Clears searchbar onclick
+   document.getElementById('search-bar').value = '';
+
    //  if there is an error with the geolocation, the user will recieve an alert
    if (!navigator.geolocation) {
       alert("Geolocation is not supported by your browser or is not enabled.");
