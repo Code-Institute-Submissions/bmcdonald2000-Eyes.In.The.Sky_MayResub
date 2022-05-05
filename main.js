@@ -40,3 +40,26 @@ function local() {
   }
 }
  
+function requestAPI(city){
+// gives url for api and allows the result fetched to be specific to the users input. (free API key, okay to publically expose)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5701594af7e6297f4750926ed730f1fd`)
+.then(response => response.json())
+.then(data => {
+ 
+  if (data.cod == "404"){
+     infoTxt.innerText = `${inputvalue.value} isn't a valid city name, please try again`;
+  }else{
+ 
+  // The user will recieve feedback so that they know there request is being loaded
+  infoTxt.innerText = "Fetching your weather details...";
+ 
+  let lat = data.coord.lat;
+  let lon = data.coord.lon;
+  getForecast(lat, lon);
+   let cityValue = data.name;
+  let country = data.sys.country;
+  weather.querySelector(".city span").innerText = `${cityValue},${country}`;
+  wrapper.classList.add("active");
+  infoTxt.innerText = "";
+  }});
+}
