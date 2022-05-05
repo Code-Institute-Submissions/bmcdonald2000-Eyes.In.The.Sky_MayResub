@@ -209,3 +209,22 @@ let getDayofWeek = function(DayNumb) {
  weekday[6] = 'Sat';
 return (weekday[DayNumb]);
 };};
+ 
+// If successful, the co-ordinates from the users location are parsed through the api endpoint
+function onSuccess(position){
+  const {latitude, longitude} = position.coords;
+  fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=5701594af7e6297f4750926ed730f1fd`)
+  .then(response => response.json())
+  .then(data=> {
+ 
+  const city = data.name;
+  const country = data.sys.country;
+  weather.querySelector(".city span").innerHTML= `${city}, ${country}`;
+  fetchData(latitude, longitude);
+  });
+}
+// If an error occurs an error message is returned.
+function onError(error){
+   infoTxt.innerText = error.message;
+}
+ 
