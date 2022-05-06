@@ -11,7 +11,7 @@
 
 ## What is Eyes In The Sky ? :bulb:
 
-Eyes In The Sky is a weather application that provides live and forecast weather data based on the users location or a location of their choice. Eyes In The Sky is useful for individuals who wish to plan their day/week in occordance to the weather. The ability to check both global and local weather is particularly useful to users planning to take a trip abroad.
+Eyes In The Sky is a weather application that provides live and forecast weather data based on the users location or a location of their choice. Eyes In The Sky is useful for individuals who wish to plan their day/week in occordance to the weather. The ability to check the weather using your current location or custom search offers flexibility. This is particularly useful to users planning to take a trip abroad or anyone travelling outside of their local area, be it for work or lesiure.
 
 <details>
 <summary><strong>Table of contents:</strong></summary>
@@ -37,17 +37,22 @@ Eyes In The Sky is a weather application that provides live and forecast weather
 ### User Stories :scroll:
 
 • As a user, I want to be able to acess weather data on my mobile so I can check the weather whislt on the go.
-• As a user, I want to be able to check the hourly weather for the current days weather.
+
 • As a user, I want to be able to input my own location into an input field in order to get weather data for any desired location.
+
 • As a user, I want to be able to successfully submit my input in order to retrieve weather data for my input.
+
 • As a user, I want some sort of feedback to let me know my search request was processed.
+
 • As a user, I want to be able to use my device's location in order to get weather data without needing to type in my location.
+
 • As a user, I want to be able to view the results of my successful search so that I can know the weather.
+
 • As a user, I want to view the future weather for my searched location so that I know what the weather will be like for the rest of the week.
 
 ### Design :art:
 
-The main goal was to make an intuitive UX, so that the user is not confused when visiting the Website. To achieve this, I created a simple, succinct, one-page web application. Once the page has loaded the user sees a searchbar with place holder text, that tells them to enter a location. There is also a set of instructions below the text to insure the user understands the button functions.
+The main goal was to make an intuitive UX, so that the user is not confused when visiting the Website. To achieve this, I created a simple, succinct, one-page web application. Once the page has loaded the user sees a searchbar with place holder text, that tells them to enter a location.
 
 The users desired results needed to be obtained with ease. This was achieved by using a 'Current Location' button, so they can get search results within one click, limiting the number of user actions to generate weather data.
 
@@ -57,22 +62,22 @@ The results of the search also needed to be clear , partciuarly for those using 
 
  **• Colour scheme**
 
-   ° I have gone for a complimentary colour palette, which I desgined using [canva](https://www.canva.com/colors/color-wheel/). The overall theme of the site is blue(#419AFF) and orange (#FFA641) as these are colours of the  sky and sun, thus commonly associated with the weather,  tying in with the purpose of the app. To make things easy for the user I used a monchrome design for the text. All hourly and forecasted weather data is displayed in white font (#000000) and a black background (#000000ec), an opaque black was used to create enough contrast between the animated background and the text for it to be visible, but not so much that it distracts the user from the animation or disrupts the fluidity of the design. Where a white font was not suitable I have used black (#ffffff).
+   ° I have gone for a complimentary colour palette, which I desgined using [canva](https://www.canva.com/colors/color-wheel/). Initially, the theme of the site is blue(#419AFF) and orange (#FFA641) as these are colours of the  sky and sun, thus commonly associated with the weather,  tying in with the purpose of the app. These colours had low contrast when tested on [WebAim](https://webaim.org/resources/contrastchecker/) so I changed them to a dark blue(#02085A) and a darker orange (#FF8847). To make things easy for the user I used a monchrome design for the text. All  weather data is displayed in black text (#ffffff) on a white card (#000000). 
 
 
 **• Typography**
 
-   ° In keeping with the simple style of the website, I have chosen to use a Thai and Latin family font 'Mali' as it has a carefree feel and is easy to read. I want the users to be carefree whislt using the site as the purpose of the site is to alow the users to retrived their desired data in a stress free way. 
+   ° In keeping with the simple style of the website, I have chosen to use a Thai and Latin family font 'Mali' as it has a carefree feel and is easy to read. I want the users to be carefree whislt using the site as the purpose of the site is to alow the users to retrive their desired data in a stress free way. 
 
  **• Imagery**
 
    ° The weather icons seen on the site are from the [Rest API](https://openweathermap.org/api). 
-   ° The icons used for the buttons and the loader are from [font awesome](https://fontawesome.com/v6.0)
-   ° The animated backgrounds used are from [pexels](https://www.pexels.com/).
+
+   ° The icons used for humidity and feels like [Box Icon](https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css')
 
 **• Wireframes**
 
-   °  Wireframes were created using [Figma](https://www.figma.com/). To meet my UX objective of  creating a simple and intuitive User Interface (UI), I initially used a different colour schemes but further into the development I  realised greater contrast was required in order to engage the User. I also decided to include animated background and more craetive button styling, keeping inline with the simplistic theme but improving user engagement.  Here is the link to [my wireframes](https://www.figma.com/file/4BqP3k0Ta5XqvtWtveeFtR/Wire-Frames?node-id=0%3A1) for desktop and mobile. Below are screenshots of the desktop and mobile Wireframes. :point_down:
+   °  Wireframes were created using [Figma](https://www.figma.com/). To meet my UX objective of  creating a simple and intuitive User Interface (UI), I initially used a different colour schemes but further into the development I  realised greater contrast was required in order to engage the User. I also took a more modern, minimalisitic approach with the UX, in order to improve user engagement without straying from the simplistic theme.  Here is the link to [my wireframes](https://www.figma.com/file/4BqP3k0Ta5XqvtWtveeFtR/Wire-Frames?node-id=0%3A1) for desktop and mobile. Below are screenshots of the desktop and mobile Wireframes. :point_down:
 
   **Desktop:** :desktop_computer:
 
@@ -86,25 +91,22 @@ The results of the search also needed to be clear , partciuarly for those using 
 
 ### Current features
 
-##### Instructions container
-When the user visits the web application, there are a few simple instructions that allow the user to understand how to use the site.
+~~##### Instructions container~~ 
+~~ When the user visits the web application, there are a few simple instructions that allow the user to understand how to use the site.~~ 
 
 ##### Current Location Weather
 The user can click the location button, the browser will then ask the user permission to access their device's location. Once that is accepted, the weather results shown will be for that location - using latitude and longitude of the User's device. This button uses the Geolocation API.
 
-##### Global button
-Alternatively, the user can enter a location of their choice into the searchbar. Then click the global button, the weather API will return weather data for that location, provided the input is valid. Otherwise an error message will occur and the user will be prompted to try again.
+##### Search button
+Alternatively, the user can enter a location of their choice into the searchbar. Then click the Search button, the weather API will return weather data for that location, provided the input is valid. Otherwise an error message will occur and the user will be prompted to try again.
 
 ##### Live Weather
-When the user clicks either button, the app will display the current weather, location and any key information about the location. (Temperature, Weather,Humidity, Wind Speed, Pressure, Feels like, Highs and Lows). 
+When the user clicks either button, the app will display the current weather, location and any key information about the location. 
 
 More information could have been added, but this could have potentially overwhelmed the user so instead I decided that this information was most important to a user seeking live weather information. 
 
-##### Hourly Weather
-To ensure the user recives the most accurate weather information for the day, hourly weather data for that location, is also displayed below the Live weather data.
-
 ##### Forecast Weather
-The user will alos be provide with weather forcast for the next 6 days. Giving them a 7day weather app. To maintain the simplicity of the UX only the day, weather, weather icon and temperature is displayed for forecasted weather.
+The user will also be provide with weather forcast for the next 6 days. Giving them a 7day weather app. To maintain the simplicity of the UX only the day, weather, weather icon and temperature is displayed for forecasted weather.
 
 ##### Footer
 The footer contains buttons with links to Github, LinkedIn and Email where the can contact me. The links also open in a new tab for the users convenience.
@@ -118,28 +120,25 @@ The data for each location is returned in a seperate card allowing the user to c
 
 ## Technologies used:
 
-#### Langugaes and librarys used
+#### Languages and librarys used
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
 
 #### Programs used
 
-![Canva](https://www.canva.com/) - I used canva to create my colour palette. I also used Canva to remove the background colour of my logo and the Spiral image on the about us page.
-
-[Tinypng](https://tinypng.com/) - I used Tinypng to compress my images
-
-[Ezgift](https://ezgif.com/video-to-gif) - I used Ezgift to covert my videos to gifs
+[Canva](https://www.canva.com/) - I used canva to create my colour palette. I also used Canva to remove the background colour of my logo and the Spiral image on the about us page.
 
 [AmIResponisve](http://ami.responsivedesign.is/#) - I used amiresposive to generate the resposive image at the start of my Readme.
 
 [WebpageTest](https://www.webpagetest.org/)- I used webpage testing to test my webpage across a range of devices.
 
 [Tailor Brands](https://studio.tailorbrands.com/) - I used Tailor brands to create my logo.
-
-[Font Awesome](https://fontawesome.com/) - I used Fontawesome to add icons to my button and footer. I also used Fontawesome for my loading icon.
 
 [Git](https://git-scm.com/) - I used Git to track the changes to my code. Git was also used for version control.
 
@@ -151,13 +150,14 @@ The data for each location is returned in a seperate card allowing the user to c
 
 [Google Fonts](https://fonts.google.com/) - The fonts used are google fonts.
 
-![Figma](https://www.figma.com/) - I used figma to design my mockups.
+[Figma](https://www.figma.com/) - I used figma to design my mockups.
+
+[Box Icon](https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css') - I use Box Icon to add icons to my app.
 
 [Gitpod](https://www.gitpod.io/blog/next-chapter-for-gitpod) - Gitpod is powered by VS Code, storing my code in the cloud. I can then commit that code to my Github repository as Gitpod and Github are connected.
 
 [Lighthouse testing](https://developers.google.com/web/tools/lighthouse) - I used lighthouse testing to test the performance of my webpage.
 
-[Pexels](https://www.pexels.com/) - I used pexels to get the royalty free videos that I turned into my background animations.
 
 ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
@@ -165,6 +165,7 @@ The data for each location is returned in a seperate card allowing the user to c
 ![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)	
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
 
 ## Testing :test_tube:
 
@@ -197,7 +198,7 @@ The data for each location is returned in a seperate card allowing the user to c
   **•Lighthouse testing**
   The overall performance of my webpage is good but there is room for improvement in best practices. As seen in the screenshot below. 
 
-  <img src="Assets/Images/Lighthouse.png" width="700px" height="250px" alt="Lighthouse testing results">
+  <img src="Assets/Images/Lighthouse.png" height="250px" width="700px"  alt="Lighthouse testing results">
 
   In order to improve this I added the following:
   
@@ -211,24 +212,24 @@ The data for each location is returned in a seperate card allowing the user to c
 
   I used webpage testing to conduct performance testing across a range of devices, my results were the same across all devices tested. Below is a screenshot of the results from a Google Pixel XL
 
- <img src ="Assets/Images/Webpagetest.png" alt="performance testing results"width="700px" height="250px">
+  <img src ="Assets/Images/Webpagetest.png" alt="performance testing results" width="850px" height="250px">
 
 ##### Browser Compatibility
 
 The above HTML and CSS Validators test for valid code that is compatible with all browsers.
 
+
+
 The following functions were tested on the following browsers using a pass / fail system:
 
 |   Function	    |  Browser 	| Result  	|
 |-----------------|-----------|-----------|
-| Geolocation API |  Chrome / Firefox / Safari / Opera	 	|   PASS	|
-| Search bar	    |   Chrome / Firefox / Safari / Opera		| PASS  	|
-| Hourly weather	|  Chrome / Firefox / Safari / Opera	 	|  PASS 	|
-| Forecast weather|  Chrome / Firefox / Safari / Opera	 	|   PASS	|
-| Import Icons	  |  Chrome / Firefox / Safari / Opera	 	|   PASS	|
-| Switch background animation |  Chrome / Firefox / Safari / Opera		|   PASS	|
-| Current weather |  Chrome / Firefox / Safari / Opera	 	|   PASS	|
-| Footer Links 	  |  Chrome / Firefox / Safari / Opera		|  PASS 	|
+| Geolocation API | ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white) ![Safari](https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white) ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)|   PASS	
+| Search bar	    |  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white) ![Safari](https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white) ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)|	 PASS  	|
+| Forecast weather|  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white) ![Safari](https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white) ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)	 	|   PASS	|
+| Import Icons	  |  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white) ![Safari](https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white) ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white) 	|   PASS	|
+| Current weather |  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white) ![Safari](https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white) ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)	 	|   PASS	|
+Footer Links 	  |  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white) ![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=Firefox-Browser&logoColor=white) ![Safari](https://img.shields.io/badge/Safari-000000?style=for-the-badge&logo=Safari&logoColor=white) ![Opera](https://img.shields.io/badge/Opera-FF1B2D?style=for-the-badge&logo=Opera&logoColor=white)	|  PASS 	|
 
 • OS compatibility was tested on iOS 14.8, Android 11, ipadOS 15, Windows 10 and MacOS BigSur.
 
@@ -247,11 +248,6 @@ The following functions were tested on the following browsers using a pass / fai
   
   ° Core weather data is acessible on mobile
 
-**• As a user, I want to be able to check the hourly weather for the current days weather.** :+1:
-:thumbsup:
-  
-  ° Hourly weather data is availbe across all devices
-
 **• As a user, I want to be able to input my own location into an input field in order to get weather data for any desired location.** :+1:
 :thumbsup:
   
@@ -260,7 +256,7 @@ The following functions were tested on the following browsers using a pass / fai
 **• As a user, I want to be able to successfully submit my input in order to retrieve weather data for my input.** :+1:
 :thumbsup:
   
-  ° The global button allows user input to be submitted and data is retrived.
+  ° The search button allows user input to be submitted and data is retrived.
 
 **• As a user, I want some sort of feedback to let me know my search request was processed.** :+1:
 :thumbsup:
@@ -328,9 +324,6 @@ I used the following steps to deploy this site:
  •Subsequent lines of code were running before previous lines of code had finished.
 
    °In order to fix this I use Asynchronous funtions.
-
-  •Time and date was displayed in epoch time
-   °In order to fix this I used converted the data to hours beore it was returned
   
   •The days of the week were returned as numbers
    °In order to fix this I used converted the day number into a day before the data was returned.
@@ -358,5 +351,6 @@ I used the following steps to deploy this site:
 ### Acknowledgemnts
 
 • To my mentor, thank you for all your guidance and insights, I am extremly greatful.
+
 • To everyone who tested the web app, thank you for your feedback.
 
