@@ -240,38 +240,31 @@ Footer Links 	  |  ![Google Chrome](https://img.shields.io/badge/Google%20Chrome
 
 #### User story testing  
 
-**• As a user, I want to be able to acess weather data on my mobile so I can check the weather whislt on the go.** :+1:
-:thumbsup:
+**• As a user, I want to be able to acess weather data on my mobile so I can check the weather whislt on the go.** :heavy_check_mark:
   
   ° Core weather data is acessible on mobile
 
-**• As a user, I want to be able to input my own location into an input field in order to get weather data for any desired location.** :+1:
-:thumbsup:
+**• As a user, I want to be able to input my own location into an input field in order to get weather data for any desired location.** :heavy_check_mark:
   
   ° User is able to input their own location and data is returned provided the input is valid.
 
-**• As a user, I want to be able to successfully submit my input in order to retrieve weather data for my input.** :+1:
-:thumbsup:
+**• As a user, I want to be able to successfully submit my input in order to retrieve weather data for my input.** :heavy_check_mark:
   
   ° The search button allows user input to be submitted and data is retrived.
 
-**• As a user, I want some sort of feedback to let me know my search request was processed.** :+1:
-:thumbsup:
+**• As a user, I want some sort of feedback to let me know my search request was processed.** :heavy_check_mark:
   
-  ° A spinner is displayed while the data is loading and error messages notify the user if the submission was unsucessful. Hints are also included to help the user resolve the issue as quikly as possible.
+  ° I have created messages so the user knows there results are being fetched. All error messages are also displayed so the user knows why the data was not returned. 
 
-**• As a user, I want to be able to use my device's location in order to get weather data without needing to type in my location.** :+1:
-:thumbsup:
+**• As a user, I want to be able to use my device's location in order to get weather data without needing to type in my location.** :heavy_check_mark:
   
   ° The local button uses the geolocation API to retrive users co-ordinates and return weather data for their location
 
-**• As a user, I want to be able to view the results of my successful search so that I can know the weather.** :+1:
-:thumbsup:
+**• As a user, I want to be able to view the results of my successful search so that I can know the weather.** :heavy_check_mark:
   
-  ° The results are easily view by the user, with scroll enabled for overflow on smaller devices.
+  ° The results are easily viewed by the user, with scroll enabled for overflow on smaller devices.
 
-**• As a user, I want to view the future weather for my searched location so that I know what the weather will be like for the rest of the week.** 	:+1:
-:thumbsup:
+**• As a user, I want to view the future weather for my searched location so that I know what the weather will be like for the rest of the week.** :heavy_check_mark:
   
   ° Weather forecast is displayed for next 6 days , irrespective of the button pressed. 
 
