@@ -304,4 +304,7 @@ footer i{
    footer{
       font-size: smaller;
    }
+   .wrapper{
+      width: 60%;
+   }
  }
