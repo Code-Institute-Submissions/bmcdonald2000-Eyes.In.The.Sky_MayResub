@@ -79,6 +79,7 @@ header i{
    display: block;
    background: #f8d7da;
    border: 1px solid #f5c6cb;
+   padding: 3%;
 }
 /* Styles other messages*/
 .current-info .info-txt.loading{
@@ -86,6 +87,7 @@ header i{
    display: block;
    background: #d1ecf1;
    border: 1px solid #bee5eb;
+   padding: 3%;
 }
 /* styles the search bar and button */
 .current-info :where(input, button){
@@ -274,7 +276,7 @@ width: 100%;
 /* styles footer*/
 footer{
  font-family: 'Mali', cursive;
- padding: 7px;
+ padding: 5px;
  background-color: #FF8847;
  display: flex;
  align-items: center;
@@ -287,3 +289,19 @@ footer i{
    color: #02085A;
    font-size: 40px;
 }
+@media only screen and (max-width: 600px) {
+   .container {
+     margin: 10%;
+     font-size: x-small;
+   }
+   .wrapper.active{
+      width: 60%;
+   }
+   .weatherForecast{
+      width: 55vw;
+      overflow: scroll;
+   }
+   footer{
+      font-size: smaller;
+   }
+ }
