@@ -242,4 +242,33 @@ function fetchData(latitude, longitude){
       infoTxt.classList.add("error");
       infoTxt.innerText = "we're having trouble fetching the weather based on your location, please use the search bar";
  }}
+// if there was an error collecting the weather data, the user is informed  
+function weatherDetails(data){
+   if(data.cod == "404"){
+         infoTxt.classList.add("error");
+         infoTxt.innerText = "we're having trouble fetching the weather based on your location, please use the search bar";
+   // if the details are fetched then the requested details are returned
+   }else{
+         const {description} = data.current.weather[0];
+         const {temp, feels_like, humidity} = data.current;
+         
+         document.querySelector(".Temp").innerText = Math.round(temp);
+         document.querySelector(".weather").innerText = description;
+         document.querySelector(".Feels_like span").innerText = 'Feels Like: '+ Math.round(feels_like) +'°C';
+         document.querySelector(".humidity span").innerText = 'Humidity: '+ `${humidity}%`;
+         // if there are any errors an error message is displayed
+         if(data.cod == "404"){
+            infoTxt.classList.add("error");
+            infoTxt.innerHTML = error.message;
+         }else{
+            // data page is active
+            wrapper.classList.add("active");
+            // users latitude and longitude is parsed so it can be used in the next function 
+            let latitude = JSON.parse(data.lat); 
+            let longitude = JSON.parse(data.lon);
+            // calls function to fetch weekly forecast based on users location
+            weeklyForecst(latitude, longitude);
 
+         }}
+  
+}
