@@ -47,10 +47,12 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
 .then(data => {
  
   if (data.cod == "404"){
-     infoTxt.innerText = `${inputvalue.value} isn't a valid city name, please try again`;
+     infoTxt.classList.add("error");
+     infoTxt.innerText= `${inputvalue.value} isn't a valid city name, please try again`;
   }else{
  
   // The user will recieve feedback so that they know there request is being loaded
+  infoTxt.classList.add("loading");
   infoTxt.innerText = "Fetching your weather details...";
  
   let lat = data.coord.lat;
@@ -61,6 +63,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&ap
   weather.querySelector(".city span").innerText = `${cityValue},${country}`;
   wrapper.classList.add("active");
   infoTxt.innerText = "";
+  infoTxt.classList.remove("error","loading");
   }});
 }
 // A different endpoint is used to return the data based on the lat and lon of the users input value
@@ -190,10 +193,11 @@ document.getElementById("feels_like").innerHTML = 'Feels like:' + feelslikeValue
  document.getElementById("icon7").src = getIcon7;
  
 });
-  // returns user back to the input page, clears the input
+  // returns user back to the input page, clears the input and reloads the screen
   Back.addEventListener("click", ()=>{
   wrapper.classList.remove("active");
   inputvalue.value = "";
+  location.reload();
  
 });
  
@@ -225,6 +229,6 @@ function onSuccess(position){
 }
 // If an error occurs an error message is returned.
 function onError(error){
+   infoTxt.classList.add("error");
    infoTxt.innerText = error.message;
 }
- 
