@@ -272,3 +272,148 @@ function weatherDetails(data){
          }}
   
 }
+//  weekly forecast function
+function weeklyForecst(latitude, longitude) {
+ 
+   fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=5701594af7e6297f4750926ed730f1fd`)
+   .then(response => response.json())
+   .then(Data=> {
+        
+   // Tommorow's data
+   let epochTommorrow = Data.daily['1'].dt;
+   let FullDateTommorrow= new Date(epochTommorrow * 1000);
+   let TommorrowNumb = FullDateTommorrow.getDay();
+   let Tommorrow= getDayofWeek(TommorrowNumb);
+   let TempTomo = Math.round(Data.daily['1'].temp.day);
+   let WeatherTomo = Data.daily['1'].weather[0].main;
+
+   // Day After Tommorrow's data
+   let epochDayAfterTommorrow = Data.daily['2'].dt;
+   let FullDate3 = new Date(epochDayAfterTommorrow * 1000);
+   let DayAfterTommorrowNumb = FullDate3.getDay();
+   let DayAfterTommorrow= getDayofWeek(DayAfterTommorrowNumb);
+   let TempDayAfterTomo = Math.round(Data.daily['2'].temp.day);
+   let WeatherDayAfterTomo = Data.daily['2'].weather[0].main;
+
+   // Fourth Days data
+   let epochFourthDay = Data.daily['3'].dt;
+   let FullDate4 = new Date(epochFourthDay * 1000);
+   let FourthDayNumb = FullDate4.getDay();
+   let FourthDay= getDayofWeek(FourthDayNumb);
+   let TempDFour = Math.round(Data.daily['3'].temp.day);
+   let WeatherDFour = Data.daily['3'].weather[0].main;
+
+   //Fifth Days data
+   let epochFifthDay = Data.daily['4'].dt;
+   let FullDate5 = new Date(epochFifthDay * 1000);
+   let FifthDayNumb = FullDate5.getDay();
+   let FifthDay= getDayofWeek(FifthDayNumb);
+   let TempDFive = Math.round(Data.daily['4'].temp.day);
+   let WeatherDFive = Data.daily['4'].weather[0].main;
+
+   //Sixth Days data
+   let epochSixthDay = Data.daily['5'].dt;
+   let FullDate6 = new Date(epochSixthDay * 1000);
+   let SixthDayNumb = FullDate6.getDay();
+   let SixthDay= getDayofWeek(SixthDayNumb);
+   let TempDSix = Math.round(Data.daily['5'].temp.day);
+   let WeatherDSix = Data.daily['5'].weather[0].main;
+
+   //Seventh Days data
+   let epochSeventhDay = Data.daily['6'].dt;
+   let FullDate7 = new Date(epochSeventhDay * 1000);
+   let SeventhDayNumb = FullDate7.getDay();
+   let SeventhDay= getDayofWeek(SeventhDayNumb);      
+   let TempDSeven = Math.round(Data.daily['6'].temp.day);
+   let WeatherDSeven = Data.daily['6'].weather[0].main;
+
+   //Icon url and format
+   let iconUrl = "http://openweathermap.org/img/wn/";
+   let format = ".png";
+
+   //Tomorrow's icons data
+   let tomorrowsIcon = Data.daily['1'].weather[0].icon;
+   let getTomorowsIcon = iconUrl + tomorrowsIcon + format;
+
+   //DayAfterTommorrow
+   let DayAfterTommorrowIcon = Data.daily['2'].weather[0].icon;
+   let getDayAfterTommorrowIcon = iconUrl + DayAfterTommorrowIcon + format;
+
+   //Day 4's icon data
+   let Icon4 = Data.daily['3'].weather[0].icon;
+   let getIcon4 = iconUrl + Icon4 + format;
+
+   //Day 5's icon data
+   let Icon5 = Data.daily['4'].weather[0].icon;
+   let getIcon5 = iconUrl + Icon5 + format;
+
+   //Day 6's icon data
+   let Icon6 = Data.daily['5'].weather[0].icon;
+   let getIcon6 = iconUrl + Icon6 + format;
+
+   //Day 7's icon data
+   let Icon7 = Data.daily['6'].weather[0].icon;
+   let getIcon7 = iconUrl + Icon7 + format;
+
+   // Tomorrows data will be returned in the following elements
+   document.getElementById("tomorrows").innerHTML = Tommorrow;
+   document.getElementById("temptomo").innerHTML = TempTomo + "°c";
+   document.getElementById("Weathertomo").innerHTML = WeatherTomo;
+
+   // DayAfterTommorrows data will be returned in the following elements
+   document.getElementById("day3").innerHTML = DayAfterTommorrow;
+   document.getElementById("day3temp").innerHTML = TempDayAfterTomo + "°c";
+   document.getElementById("Weatherday3").innerHTML = WeatherDayAfterTomo;
+
+   // Day 4's data will be returned in the following elements
+   document.getElementById("day4").innerHTML = FourthDay;
+   document.getElementById("day4temp").innerHTML = TempDFour + "°c";
+   document.getElementById("Weatherday4").innerHTML = WeatherDFour;
+
+   // Day 5's data will be returned in the following elements
+   document.getElementById("day5").innerHTML = FifthDay;
+   document.getElementById("day5temp").innerHTML = TempDFive + "°c";
+   document.getElementById("Weatherday5").innerHTML = WeatherDFive;
+
+   // Day 6's data will be returned in the following elements
+   document.getElementById("day6").innerHTML = SixthDay;
+   document.getElementById("day6temp").innerHTML = TempDSix + "°c";
+   document.getElementById("Weatherday6").innerHTML = WeatherDSix;
+
+   // Day 7's data will be returned in the following elements
+   document.getElementById("day7").innerHTML = SeventhDay;
+   document.getElementById("day7temp").innerHTML = TempDSeven + "°c";
+   document.getElementById("Weatherday7").innerHTML = WeatherDSeven;
+
+   //Tomorrow's icons
+   document.getElementById("Tomorrows-icon").src = getTomorowsIcon;
+   //DayAfterTommorrow's icon
+   document.getElementById("DayAfterTomorrows-icon").src = getDayAfterTommorrowIcon;
+   //Day 4's icon
+   document.getElementById("icon4").src = getIcon4;
+   //Day 5's icon
+   document.getElementById("icon5").src = getIcon5;
+   //Day 6's icon
+   document.getElementById("icon6").src = getIcon6;
+   //Day 7's icon
+   document.getElementById("icon7").src = getIcon7;
+});
+   Back.addEventListener("click", ()=>{
+   wrapper.classList.remove("active");
+   infoTxt.innerText = " ";
+   infoTxt.classList.remove("error","loading");
+   location.reload();
+});
+   // converts the day of the week from a number to a day
+   let getDayofWeek = function(DayNumb) {
+      var weekday = new Array(7);
+      weekday[0] = 'Sun';
+      weekday[1] = 'Mon';
+      weekday[2] = 'Tue';
+      weekday[3] = 'Wed';
+      weekday[4] = 'Thu';
+      weekday[5] = 'Fri';
+      weekday[6] = 'Sat';
+   return (weekday[DayNumb]);
+   };
+}
