@@ -220,7 +220,7 @@ function onSuccess(position){
   fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=5701594af7e6297f4750926ed730f1fd`)
   .then(response => response.json())
   .then(data=> {
- 
+//  data is then returned in HTML and latitude and longitude is used to fetch the weather
   const city = data.name;
   const country = data.sys.country;
   weather.querySelector(".city span").innerHTML= `${city}, ${country}`;
@@ -232,3 +232,14 @@ function onError(error){
    infoTxt.classList.add("error");
    infoTxt.innerText = error.message;
 }
+// Function to fetch the weather based on the users location 
+function fetchData(latitude, longitude){
+   infoTxt.classList.add("loading");
+   infoTxt.innerText = "Fetching your weather details...";
+   var api = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&appid=5701594af7e6297f4750926ed730f1fd`;
+   fetch(api).then(res => res.json()).then(data => weatherDetails(data));
+   if(cod == "404"){
+      infoTxt.classList.add("error");
+      infoTxt.innerText = "we're having trouble fetching the weather based on your location, please use the search bar";
+ }}
+
