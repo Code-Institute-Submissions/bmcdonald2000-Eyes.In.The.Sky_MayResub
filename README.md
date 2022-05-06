@@ -3,7 +3,7 @@
 
 ![Responsive-Website-Image](/Assets/Images/Responsive.png)
 
-:globe_with_meridians: [Live Website])(https://bmcdonald2000.github.io/Eyes.In.The.Sky/)
+:globe_with_meridians: [Live Website](https://bmcdonald2000.github.io/Eyes.In.The.Sky/)
 
 ![Github Icon](/Assets/Images/github.png) [Github repository](https://github.com/bmcdonald2000/Eyes.In.The.Sky)
 
